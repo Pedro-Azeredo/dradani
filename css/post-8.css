@@ -21,7 +21,7 @@
 
 .elementor-8 .elementor-element.elementor-element-73fbcff:not(.elementor-motion-effects-element-type-background),
 .elementor-8 .elementor-element.elementor-element-73fbcff>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-  background-image: url("../images/bg_hero-scaled.webp");
+  background-image: url("../images/bg-hero.webp");
   background-position: center center;
   background-size: cover;
 }
@@ -186,21 +186,26 @@
   font-weight: 500;
   fill: #FFFFFF;
   color: #FFFFFF;
-  background-color: #25D366;
+  background-color: #7A6F48;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
+  border-color: #7A6F48;
   border-radius: 5px 5px 5px 5px;
+  transition: all 0.3s ease;
 }
 
 .elementor-8 .elementor-element.elementor-element-50a2fbf .elementor-button:hover,
 .elementor-8 .elementor-element.elementor-element-50a2fbf .elementor-button:focus {
-  color: #A39660;
-  background-color: var(--e-global-color-accent);
+  color: #FFFFFF;
+  background-color: #A39660;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(163, 150, 96, 0.35);
 }
 
 .elementor-8 .elementor-element.elementor-element-50a2fbf .elementor-button:hover svg,
 .elementor-8 .elementor-element.elementor-element-50a2fbf .elementor-button:focus svg {
-  fill: #A39660;
+  fill: #FFFFFF;
 }
 
 .elementor-8 .elementor-element.elementor-element-50a2fbf>.elementor-widget-container {
@@ -305,21 +310,26 @@
   font-weight: 500;
   fill: #FFFFFF;
   color: #FFFFFF;
-  background-color: #25D366;
+  background-color: #7A6F48;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
+  border-color: #7A6F48;
   border-radius: 5px 5px 5px 5px;
+  transition: all 0.3s ease;
 }
 
 .elementor-8 .elementor-element.elementor-element-9298720 .elementor-button:hover,
 .elementor-8 .elementor-element.elementor-element-9298720 .elementor-button:focus {
-  color: #A39660;
-  background-color: var(--e-global-color-accent);
+  color: #FFFFFF;
+  background-color: #7A6F48;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(163, 150, 96, 0.35);
 }
 
 .elementor-8 .elementor-element.elementor-element-9298720 .elementor-button:hover svg,
 .elementor-8 .elementor-element.elementor-element-9298720 .elementor-button:focus svg {
-  fill: #A39660;
+  fill: #FFFFFF;
 }
 }
 }
@@ -579,21 +589,26 @@
   font-weight: 500;
   fill: #FFFFFF;
   color: #FFFFFF;
-  background-color: #25D366;
+  background-color: #7A6F48;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
+  border-color: #7A6F48;
   border-radius: 5px 5px 5px 5px;
+  transition: all 0.3s ease;
 }
 
 .elementor-8 .elementor-element.elementor-element-510005e .elementor-button:hover,
 .elementor-8 .elementor-element.elementor-element-510005e .elementor-button:focus {
-  color: #A39660;
-  background-color: var(--e-global-color-accent);
+  color: #FFFFFF;
+  background-color: #7A6F48;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(163, 150, 96, 0.35);
 }
 
 .elementor-8 .elementor-element.elementor-element-510005e .elementor-button:hover svg,
 .elementor-8 .elementor-element.elementor-element-510005e .elementor-button:focus svg {
-  fill: #A39660;
+  fill: #FFFFFF;
 }
 }
 }
@@ -720,7 +735,7 @@
 .elementor-8 .elementor-element.elementor-element-d7960d4>.e-con-inner>.elementor-background-slideshow::before,
 .elementor-8 .elementor-element.elementor-element-d7960d4>.elementor-motion-effects-container>.elementor-motion-effects-layer::before {
   --background-overlay: '';
-  background-image: url("../images/TEXTURA.webp");
+  background-image: url("../images/bg-textura.webp");
 }
 
 .elementor-8 .elementor-element.elementor-element-d7960d4,
@@ -1089,21 +1104,26 @@
   font-weight: 500;
   fill: #FFFFFF;
   color: #FFFFFF;
-  background-color: #25D366;
+  background-color: #7A6F48;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
+  border-color: #7A6F48;
   border-radius: 5px 5px 5px 5px;
+  transition: all 0.3s ease;
 }
 
 .elementor-8 .elementor-element.elementor-element-8ea7795 .elementor-button:hover,
 .elementor-8 .elementor-element.elementor-element-8ea7795 .elementor-button:focus {
-  color: #A39660;
-  background-color: var(--e-global-color-accent);
+  color: #FFFFFF;
+  background-color: #A39660;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(163, 150, 96, 0.35);
 }
 
 .elementor-8 .elementor-element.elementor-element-8ea7795 .elementor-button:hover svg,
 .elementor-8 .elementor-element.elementor-element-8ea7795 .elementor-button:focus svg {
-  fill: #A39660;
+  fill: #FFFFFF;
 }
 }
 }
@@ -1141,7 +1161,7 @@
 .elementor-8 .elementor-element.elementor-element-00ecaaf>.e-con-inner>.elementor-background-slideshow::before,
 .elementor-8 .elementor-element.elementor-element-00ecaaf>.elementor-motion-effects-container>.elementor-motion-effects-layer::before {
   --background-overlay: '';
-  background-image: url("../images/TEXTURA.webp");
+  background-image: url("../images/bg-textura.webp");
 }
 
 .elementor-8 .elementor-element.elementor-element-00ecaaf,
@@ -1157,10 +1177,16 @@
   --container-widget-flex-grow: 0;
   --container-widget-align-self: initial;
   --background-transition: 0.3s;
+  --justify-content: center;
+  --align-items: center;
+  --padding-block-start: 40px;
+  --padding-block-end: 40px;
+  --padding-inline-start: 40px;
+  --padding-inline-end: 40px;
 }
 
 .elementor-8 .elementor-element.elementor-element-b7c1cda {
-  text-align: left;
+  text-align: center;
 }
 
 .elementor-8 .elementor-element.elementor-element-b7c1cda .elementor-heading-title {
@@ -1185,21 +1211,26 @@
   font-weight: 500;
   fill: #FFFFFF;
   color: #FFFFFF;
-  background-color: #25D366;
+  background-color: #7A6F48;
   border-style: solid;
   border-width: 1px 1px 1px 1px;
+  border-color: #7A6F48;
   border-radius: 5px 5px 5px 5px;
+  transition: all 0.3s ease;
 }
 
 .elementor-8 .elementor-element.elementor-element-6d7f0d3 .elementor-button:hover,
 .elementor-8 .elementor-element.elementor-element-6d7f0d3 .elementor-button:focus {
-  color: #A39660;
-  background-color: var(--e-global-color-accent);
+  color: #FFFFFF;
+  background-color: #A39660;
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(163, 150, 96, 0.35);
 }
 
 .elementor-8 .elementor-element.elementor-element-6d7f0d3 .elementor-button:hover svg,
 .elementor-8 .elementor-element.elementor-element-6d7f0d3 .elementor-button:focus svg {
-  fill: #A39660;
+  fill: #FFFFFF;
 }
 }
 }
@@ -1332,7 +1363,7 @@
   --container-widget-flex-grow: 0;
   --container-widget-align-self: initial;
   --background-transition: 0.3s;
-  --overlay-opacity: 0;
+  --overlay-opacity: 0.35;
   --padding-block-start: 100px;
   --padding-block-end: 100px;
   --padding-inline-start: 0px;
@@ -1341,7 +1372,7 @@
 
 .elementor-8 .elementor-element.elementor-element-7c47412:not(.elementor-motion-effects-element-type-background),
 .elementor-8 .elementor-element.elementor-element-7c47412>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-  background-image: url("../images/IMG_1622-copiar.webp");
+  background-image: url("../images/bg-secao-flores.webp");
   background-position: center center;
 }
 
@@ -1352,7 +1383,7 @@
 .elementor-8 .elementor-element.elementor-element-7c47412>.e-con-inner>.elementor-background-slideshow::before,
 .elementor-8 .elementor-element.elementor-element-7c47412>.elementor-motion-effects-container>.elementor-motion-effects-layer::before {
   --background-overlay: '';
-  background-color: var(--e-global-color-secondary);
+  background-color: #000000;
 }
 
 .elementor-8 .elementor-element.elementor-element-7c47412,
@@ -1636,12 +1667,12 @@ body .elementor-8 .elementor-element.elementor-element-58052b2 .elementor-labels
 }
 
 .elementor-8 .elementor-element.elementor-element-58052b2 .e-form__buttons__wrapper__button-next {
-  background-color: var(--e-global-color-secondary);
+  background-color: #A39660;
   color: #ffffff;
 }
 
 .elementor-8 .elementor-element.elementor-element-58052b2 .elementor-button[type="submit"] {
-  background-color: var(--e-global-color-secondary);
+  background-color: #A39660;
   color: #ffffff;
 }
 
@@ -1700,7 +1731,7 @@ body .elementor-8 .elementor-element.elementor-element-58052b2 .elementor-labels
 
 .elementor-8 .elementor-element.elementor-element-d9fbe90:not(.elementor-motion-effects-element-type-background),
 .elementor-8 .elementor-element.elementor-element-d9fbe90>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-  background-image: url("../images/footer_bg-scaled.webp");
+  background-image: url("../images/bg-footer.webp");
 }
 
 .elementor-8 .elementor-element.elementor-element-d9fbe90,
@@ -1882,7 +1913,7 @@ body:not(.rtl) .elementor-8 .elementor-element.elementor-element-1dfeb09 .elemen
 }
 
 .elementor-8 .elementor-element.elementor-element-1dfeb09 .elementor-icon-list-text {
-  color: var(--e-global-color-secondary);
+  color: #3A3A3A;
   transition: color 0.3s;
 }
 
@@ -1977,7 +2008,7 @@ body:not(.rtl) .elementor-8 .elementor-element.elementor-element-21b4e6f .elemen
 }
 
 .elementor-8 .elementor-element.elementor-element-21b4e6f .elementor-icon-list-text {
-  color: var(--e-global-color-secondary);
+  color: #3A3A3A;
   transition: color 0.3s;
 }
 
@@ -1995,7 +2026,7 @@ body:not(.rtl) .elementor-8 .elementor-element.elementor-element-21b4e6f .elemen
 }
 
 .elementor-8 .elementor-element.elementor-element-db48ab6 .elementor-icon-box-title {
-  color: var(--e-global-color-secondary);
+  color: #3A3A3A;
 }
 
 .elementor-8 .elementor-element.elementor-element-db48ab6 .elementor-icon-box-title,
@@ -2057,7 +2088,7 @@ body:not(.rtl) .elementor-8 .elementor-element.elementor-element-3a583bc .elemen
 }
 
 .elementor-8 .elementor-element.elementor-element-3a583bc .elementor-icon-list-text {
-  color: var(--e-global-color-secondary);
+  color: #3A3A3A;
   transition: color 0.3s;
 }
 
@@ -2114,7 +2145,7 @@ body:not(.rtl) .elementor-8 .elementor-element.elementor-element-3a583bc .elemen
 }
 
 .elementor-8 .elementor-element.elementor-element-960f58b .elementor-icon-box-title {
-  color: var(--e-global-color-secondary);
+  color: #3A3A3A;
 }
 
 .elementor-8 .elementor-element.elementor-element-960f58b .elementor-icon-box-title,
@@ -2176,7 +2207,7 @@ body:not(.rtl) .elementor-8 .elementor-element.elementor-element-2364c49 .elemen
 }
 
 .elementor-8 .elementor-element.elementor-element-2364c49 .elementor-icon-list-text {
-  color: var(--e-global-color-secondary);
+  color: #3A3A3A;
   transition: color 0.3s;
 }
 
@@ -2215,7 +2246,7 @@ body:not(.rtl) .elementor-8 .elementor-element.elementor-element-2364c49 .elemen
 
 .elementor-8 .elementor-element.elementor-element-afe2c30 {
   text-align: center;
-  color: var(--e-global-color-accent);
+  color: #3A3A3A;
   font-family: "Poppins", Sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -2349,7 +2380,7 @@ body:not(.rtl) .elementor-8 .elementor-element.elementor-element-2364c49 .elemen
 
   .elementor-8 .elementor-element.elementor-element-73fbcff:not(.elementor-motion-effects-element-type-background),
   .elementor-8 .elementor-element.elementor-element-73fbcff>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-    background-image: url("../images/FUNDO-MOBILE-scaled.webp");
+    background-image: url("../images/bg-hero-mobile.webp");
   }
 
   .elementor-8 .elementor-element.elementor-element-6ef4e10 {

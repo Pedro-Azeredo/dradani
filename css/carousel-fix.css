@@ -1,4 +1,4 @@
-/* ===== CAROUSEL - SIMPLES E FUNCIONAL ===== */
+/* ===== CAROUSEL - SWIPER NATIVO ===== */
 
 /* Botões - apenas ícone */
 .elementor-swiper-button {
@@ -9,6 +9,7 @@
   width: auto !important;
   height: auto !important;
   padding: 0 !important;
+  cursor: pointer;
 }
 
 .elementor-swiper-button svg {
@@ -26,33 +27,19 @@
   opacity: 0.8;
 }
 
-/* Container - cabe exatamente 3 slides */
+/* Container */
 .elementor-loop-container.swiper {
   overflow: hidden;
-  overflow-x: hidden;
   width: 100%;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   box-sizing: border-box;
 }
 
-/* ===== CAROUSEL - CORREÇÃO SIMPLES E FUNCIONAL ===== */
-.elementor-element-13ad2d9 .swiper-wrapper {
-  display: flex !important;
-  gap: 0px !important;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
-
+/* Slides - altura uniforme */
 .elementor-element-13ad2d9 .swiper-slide {
+  height: auto;
   box-sizing: border-box;
-  flex-shrink: 0;
-  user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+}
+
+.elementor-element-13ad2d9 .swiper-slide > .elementor-element {
+  height: 100%;
 }

@@ -767,7 +767,7 @@
 #qlwapp .qlwapp-box .qlwapp-header,
 #qlwapp .qlwapp-box .qlwapp-user,
 #qlwapp .qlwapp-box .qlwapp-user:before {
-    background-color: var(--qlwapp-scheme-brand, #25d366)
+    background-color: var(--qlwapp-scheme-brand, #265329)
 }
 
 #qlwapp .qlwapp-previous,
@@ -1222,3 +1222,6 @@ body.rtl #qlwapp .qlwapp-box .qlwapp-contact {
     margin: 0
 }
 
+#face > div > div.elementor-element.elementor-element-8637b2f.e-con-full.e-flex.e-con.e-child > div.elementor-element.elementor-element-024f9c1.elementor-widget.elementor-widget-heading > div > h3 > strong{
+    color: var(--e-global-color-primary);
+}
