@@ -357,6 +357,9 @@
   --margin-block-end: 0px;
   --margin-inline-start: 0px;
   --margin-inline-end: 0px;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
 }
 
 .elementor-8 .elementor-element.elementor-element-af24917:not(.elementor-motion-effects-element-type-background),
@@ -417,6 +420,7 @@
   --container-widget-flex-grow: 0;
   --container-widget-align-self: initial;
   --background-transition: 0.3s;
+  overflow: visible;
 }
 
 .elementor-8 .elementor-element.elementor-element-574cb45.e-con {
@@ -432,7 +436,8 @@
 }
 
 .elementor-8 .elementor-element.elementor-element-2c61892 {
-  z-index: 1;
+  z-index: 10;
+  position: relative;
 }
 
 .elementor-8 .elementor-element.elementor-element-9b6d55c {
@@ -2759,31 +2764,111 @@ body:not(.rtl) .elementor-8 .elementor-element.elementor-element-2364c49 .elemen
   }
 }
 
-/* Mobile menu toggle */
+/* Mobile menu - fullscreen overlay */
 .e-n-menu-toggle[aria-expanded=true] + .e-n-menu-wrapper {
   display: flex !important;
   flex-direction: column;
-  position: absolute;
-  top: 100%;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
   left: 0;
-  right: 0;
-  background: #2c2c2c;
-  z-index: 9999;
-  padding: 20px;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(44, 44, 44, 0.97);
+  z-index: 9998;
+  padding: 40px 20px;
+}
+
+.e-n-menu-toggle {
+  position: relative;
+  z-index: 9999 !important;
+  background: none !important;
+  border: none !important;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.elementor-widget-n-menu .e-n-menu-toggle span.hamburger-icon {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 28px !important;
+  height: 22px !important;
+  position: relative !important;
+  padding: 0 !important;
+}
+
+.elementor-widget-n-menu .e-n-menu-toggle span.bar {
+  display: block !important;
+  width: 28px !important;
+  height: 3px !important;
+  background-color: #F5F5F5 !important;
+  border-radius: 2px !important;
+  position: absolute !important;
+  left: 0 !important;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  opacity: 1 !important;
+  padding: 0 !important;
+  flex-direction: row !important;
+}
+
+.elementor-widget-n-menu .e-n-menu-toggle span.bar1 { top: 0; }
+.elementor-widget-n-menu .e-n-menu-toggle span.bar2 { top: 50%; transform: translateY(-50%); }
+.elementor-widget-n-menu .e-n-menu-toggle span.bar3 { bottom: 0; }
+
+/* Animate to X when expanded */
+.elementor-widget-n-menu .e-n-menu-toggle[aria-expanded=true] span.bar {
+  background-color: #F5F5F5 !important;
+}
+
+.elementor-widget-n-menu .e-n-menu-toggle[aria-expanded=true] span.bar1 {
+  top: 50% !important;
+  transform: translateY(-50%) rotate(45deg) !important;
+}
+
+.elementor-widget-n-menu .e-n-menu-toggle[aria-expanded=true] span.bar2 {
+  opacity: 0 !important;
+  transform: translateY(-50%) scaleX(0) !important;
+}
+
+.elementor-widget-n-menu .e-n-menu-toggle[aria-expanded=true] span.bar3 {
+  bottom: auto !important;
+  top: 50% !important;
+  transform: translateY(-50%) rotate(-45deg) !important;
 }
 
 .e-n-menu-toggle[aria-expanded=true] + .e-n-menu-wrapper .e-n-menu-heading {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: -30px;
+}
+
+.e-n-menu-toggle[aria-expanded=true] + .e-n-menu-wrapper .e-n-menu-title {
+  list-style: none;
 }
 
 .e-n-menu-toggle[aria-expanded=true] + .e-n-menu-wrapper .e-n-menu-title-text {
   color: #F5F5F5;
-  font-size: 16px;
+  font-family: "Judson", Sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 2px;
   text-decoration: none;
-  padding: 10px 0;
+  padding: 14px 0;
   display: block;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.e-n-menu-toggle[aria-expanded=true] + .e-n-menu-wrapper .e-n-menu-title-text:hover {
+  color: #A39660;
 }
 
 /* Desktop-only line break */
@@ -2794,6 +2879,12 @@ body:not(.rtl) .elementor-8 .elementor-element.elementor-element-2364c49 .elemen
 }
 
 /* Start custom CSS */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
 .justificado p {
   text-align: justify;
   text-justify: inter-word;

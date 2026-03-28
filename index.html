@@ -15,7 +15,7 @@
 	<meta property="og:url" content="#">
 	<meta property="og:site_name" content="Danielle Figueiredo">
 	<meta property="article:modified_time" content="2026-01-29T13:31:41+00:00">
-	<meta property="og:image" content="images/og-social-preview.png">
+	<meta property="og:image" content="images/og-social-preview.jpg">
 	<meta property="og:image:width" content="1024">
 	<meta property="og:image:height" content="1024">
 	<meta property="og:image:type" content="image/png">
@@ -375,17 +375,20 @@
 	<link rel="stylesheet" id="hello-elementor-theme-style-css" href="css/theme.min.css" media="all">
 	<link rel="stylesheet" id="elementor-frontend-css" href="css/frontend-lite.min_1.css" media="all">
 	<link rel="stylesheet" id="elementor-post-7-css" href="css/post-7.css" media="all">
-	<link rel="stylesheet" id="swiper-css" href="css/swiper.min.css" media="all">
+	<link rel="stylesheet" id="swiper-css" href="css/swiper.min.css" media="print" onload="this.media='all'">
 	<link rel="stylesheet" id="elementor-pro-css" href="css/frontend-lite.min.css" media="all">
 	<link rel="stylesheet" id="elementor-global-css" href="css/global.css" media="all">
 	<link rel="stylesheet" id="elementor-post-8-css" href="css/post-8.css" media="all">
-	<link rel="stylesheet" id="qlwapp-css" href="css/style.css" media="all">
+	<link rel="stylesheet" id="qlwapp-css" href="css/style.css" media="print" onload="this.media='all'">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preload" as="image" href="images/bg-hero-mobile.webp" media="(max-width: 767px)">
+	<link rel="preload" as="image" href="images/bg-hero.webp" media="(min-width: 768px)">
 	<link rel="stylesheet" id="google-fonts-1-css"
-		href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CJudson%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&display=swap&ver=6.9.4"
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Judson:wght@400;700&display=swap"
 		media="all">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-	<script src="js/jquery.min.js" id="jquery-core-js"></script>
-	<script src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+	<script src="js/jquery.min.js" id="jquery-core-js" defer></script>
+	<script src="js/jquery-migrate.min.js" id="jquery-migrate-js" defer></script>
 
 	<!-- Google Tag Manager -->
 	<script>(function (w, d, s, l, i) {
@@ -472,8 +475,8 @@
 	</style>
 	<link rel="stylesheet" id="elementor-post-166-css"
 		href="#wp-content/uploads/elementor/css/post-166.css?ver=1721849632" media="all">
-	<link rel="stylesheet" id="e-animations-css" href="css/animations.min.css" media="all">
-	<link rel="stylesheet" id="carousel-fix-css" href="css/carousel-fix.css" media="all">
+	<link rel="stylesheet" id="e-animations-css" href="css/animations.min.css" media="print" onload="this.media='all'">
+	<link rel="stylesheet" id="carousel-fix-css" href="css/carousel-fix.css" media="print" onload="this.media='all'">
 
 	<script src="js/wp-emoji-release.min.js" defer=""></script>
 	<script async src="//www.instagram.com/embed.js"></script>
@@ -535,20 +538,11 @@
 									<button class="e-n-menu-toggle" id="menu-toggle-224" aria-haspopup="true"
 										aria-expanded="false" aria-controls="menubar-224"
 										aria-label="Menu Toggle | Open (Enter or Space) | Return (Escape)">
-										<span class="e-n-menu-toggle-icon e-open">
-											<svg class="e-font-icon-svg e-eicon-menu-bar" viewBox="0 0 1000 1000"
-												xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M104 333H896C929 333 958 304 958 271S929 208 896 208H104C71 208 42 237 42 271S71 333 104 333ZM104 583H896C929 583 958 554 958 521S929 458 896 458H104C71 458 42 487 42 521S71 583 104 583ZM104 833H896C929 833 958 804 958 771S929 708 896 708H104C71 708 42 737 42 771S71 833 104 833Z">
-												</path>
-											</svg> </span>
-										<span class="e-n-menu-toggle-icon e-close">
-											<svg class="e-font-icon-svg e-eicon-close" viewBox="0 0 1000 1000"
-												xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M742 167L500 408 258 167C246 154 233 150 217 150 196 150 179 158 167 167 154 179 150 196 150 212 150 229 154 242 171 254L408 500 167 742C138 771 138 800 167 829 196 858 225 858 254 829L496 587 738 829C750 842 767 846 783 846 800 846 817 842 829 829 842 817 846 804 846 783 846 767 842 750 829 737L588 500 833 258C863 229 863 200 833 171 804 137 775 137 742 167Z">
-												</path>
-											</svg> </span>
+										<span class="hamburger-icon">
+											<span class="bar bar1"></span>
+											<span class="bar bar2"></span>
+											<span class="bar bar3"></span>
+										</span>
 									</button>
 									<div class="e-n-menu-wrapper" id="menubar-224" aria-labelledby="menu-toggle-224">
 										<ul class="e-n-menu-heading" role="menubar">
@@ -721,7 +715,7 @@
 									data-id="dceba91" data-element_type="widget" data-settings="{"
 									_animation_mobile":"fadeinup"}"="" data-widget_type="image.default">
 									<div class="elementor-widget-container">
-										<img decoding="async" width="765" height="1024"
+										<img decoding="async" fetchpriority="high" width="765" height="1024"
 											src="images/dra-danielle-retrato-765x1024.webp"
 											class="attachment-large size-large wp-image-84" alt=""
 											srcset="images/dra-danielle-retrato-765x1024.webp 765w, images/dra-danielle-retrato-224x300.webp 224w, images/dra-danielle-retrato-768x1028.webp 768w, images/dra-danielle-retrato-1148x1536.webp 1148w, images/dra-danielle-retrato-1530x2048.webp 1530w, images/dra-danielle-retrato-scaled.webp 1913w"
@@ -845,12 +839,11 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" decoding="async" width="2362"
-																	height="2560" src="images/tratamentos/laser_intimo-2362x2560.webp"
+																<img loading="lazy" decoding="async" width="945"
+																	height="1024" src="images/tratamentos/laser_intimo-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Laser Íntimo"
-																	srcset="images/tratamentos/laser_intimo-2362x2560.webp 2362w, images/tratamentos/laser_intimo-277x300.webp 277w, images/tratamentos/laser_intimo-945x1024.webp 945w, images/tratamentos/laser_intimo-768x832.webp 768w, images/tratamentos/laser_intimo-1417x1536.webp 1417w, images/tratamentos/laser_intimo-1890x2048.webp 1890w"
-																	sizes="(max-width: 2362px) 100vw, 2362px">
+																	srcset="images/tratamentos/laser_intimo-2362x2560.webp 2362w, images/tratamentos/laser_intimo-277x300.webp 277w, images/tratamentos/laser_intimo-945x1024.webp 945w, images/tratamentos/laser_intimo-768x832.webp 768w, images/tratamentos/laser_intimo-1417x1536.webp 1417w, images/tratamentos/laser_intimo-1890x2048.webp 1890w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -923,12 +916,11 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" decoding="async" width="2362"
-																	height="2560" src="images/tratamentos/implanon-2362x2560.webp"
+																<img loading="lazy" decoding="async" width="945"
+																	height="1024" src="images/tratamentos/implanon-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Implanon"
-																	srcset="images/tratamentos/implanon-2362x2560.webp 2362w, images/tratamentos/implanon-277x300.webp 277w, images/tratamentos/implanon-945x1024.webp 945w, images/tratamentos/implanon-768x832.webp 768w, images/tratamentos/implanon-1417x1536.webp 1417w, images/tratamentos/implanon-1890x2048.webp 1890w"
-																	sizes="(max-width: 2362px) 100vw, 2362px">
+																	srcset="images/tratamentos/implanon-2362x2560.webp 2362w, images/tratamentos/implanon-277x300.webp 277w, images/tratamentos/implanon-945x1024.webp 945w, images/tratamentos/implanon-768x832.webp 768w, images/tratamentos/implanon-1417x1536.webp 1417w, images/tratamentos/implanon-1890x2048.webp 1890w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -998,12 +990,11 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" decoding="async" width="2362"
-																	height="2560" src="images/tratamentos/diu-2362x2560.webp"
+																<img loading="lazy" decoding="async" width="945"
+																	height="1024" src="images/tratamentos/diu-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="DIU"
-																	srcset="images/tratamentos/diu-2362x2560.webp 2362w, images/tratamentos/diu-277x300.webp 277w, images/tratamentos/diu-945x1024.webp 945w, images/tratamentos/diu-768x832.webp 768w, images/tratamentos/diu-1417x1536.webp 1417w, images/tratamentos/diu-1890x2048.webp 1890w"
-																	sizes="(max-width: 2362px) 100vw, 2362px">
+																	srcset="images/tratamentos/diu-2362x2560.webp 2362w, images/tratamentos/diu-277x300.webp 277w, images/tratamentos/diu-945x1024.webp 945w, images/tratamentos/diu-768x832.webp 768w, images/tratamentos/diu-1417x1536.webp 1417w, images/tratamentos/diu-1890x2048.webp 1890w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1077,12 +1068,11 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" decoding="async" width="2362"
-																	height="2560" src="images/tratamentos/botox-2362x2560.webp"
+																<img loading="lazy" decoding="async" width="945"
+																	height="1024" src="images/tratamentos/botox-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Botox"
-																	srcset="images/tratamentos/botox-2362x2560.webp 2362w, images/tratamentos/botox-277x300.webp 277w, images/tratamentos/botox-945x1024.webp 945w, images/tratamentos/botox-768x832.webp 768w, images/tratamentos/botox-1417x1536.webp 1417w, images/tratamentos/botox-1890x2048.webp 1890w"
-																	sizes="(max-width: 2362px) 100vw, 2362px">
+																	srcset="images/tratamentos/botox-2362x2560.webp 2362w, images/tratamentos/botox-277x300.webp 277w, images/tratamentos/botox-945x1024.webp 945w, images/tratamentos/botox-768x832.webp 768w, images/tratamentos/botox-1417x1536.webp 1417w, images/tratamentos/botox-1890x2048.webp 1890w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1138,12 +1128,11 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" decoding="async" width="2362"
-																	height="2560" src="images/tratamentos/labial-2362x2560.webp"
+																<img loading="lazy" decoding="async" width="945"
+																	height="1024" src="images/tratamentos/labial-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Preenchimento Labial"
-																	srcset="images/tratamentos/labial-2362x2560.webp 2362w, images/tratamentos/labial-277x300.webp 277w, images/tratamentos/labial-945x1024.webp 945w, images/tratamentos/labial-768x832.webp 768w, images/tratamentos/labial-1417x1536.webp 1417w, images/tratamentos/labial-1890x2048.webp 1890w"
-																	sizes="(max-width: 2362px) 100vw, 2362px">
+																	srcset="images/tratamentos/labial-2362x2560.webp 2362w, images/tratamentos/labial-277x300.webp 277w, images/tratamentos/labial-945x1024.webp 945w, images/tratamentos/labial-768x832.webp 768w, images/tratamentos/labial-1417x1536.webp 1417w, images/tratamentos/labial-1890x2048.webp 1890w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1206,12 +1195,11 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" decoding="async" width="2362"
-																	height="2560" src="images/tratamentos/Bioestimulador-corporal-2362x2560.webp"
+																<img loading="lazy" decoding="async" width="945"
+																	height="1024" src="images/tratamentos/Bioestimulador-corporal-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Bioestimulador Corporal"
-																	srcset="images/tratamentos/Bioestimulador-corporal-2362x2560.webp 2362w, images/tratamentos/Bioestimulador-corporal-277x300.webp 277w, images/tratamentos/Bioestimulador-corporal-945x1024.webp 945w, images/tratamentos/Bioestimulador-corporal-768x832.webp 768w, images/tratamentos/Bioestimulador-corporal-1417x1536.webp 1417w, images/tratamentos/Bioestimulador-corporal-1890x2048.webp 1890w"
-																	sizes="(max-width: 2362px) 100vw, 2362px">
+																	srcset="images/tratamentos/Bioestimulador-corporal-2362x2560.webp 2362w, images/tratamentos/Bioestimulador-corporal-277x300.webp 277w, images/tratamentos/Bioestimulador-corporal-945x1024.webp 945w, images/tratamentos/Bioestimulador-corporal-768x832.webp 768w, images/tratamentos/Bioestimulador-corporal-1417x1536.webp 1417w, images/tratamentos/Bioestimulador-corporal-1890x2048.webp 1890w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1276,12 +1264,11 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" decoding="async" width="2362"
-																	height="2560" src="images/tratamentos/cirurgia_cisto-2362x2560.webp"
+																<img loading="lazy" decoding="async" width="945"
+																	height="1024" src="images/tratamentos/cirurgia_cisto-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Cirurgia de Retirada de Cistos"
-																	srcset="images/tratamentos/cirurgia_cisto-2362x2560.webp 2362w, images/tratamentos/cirurgia_cisto-277x300.webp 277w, images/tratamentos/cirurgia_cisto-945x1024.webp 945w, images/tratamentos/cirurgia_cisto-768x832.webp 768w, images/tratamentos/cirurgia_cisto-1417x1536.webp 1417w, images/tratamentos/cirurgia_cisto-1890x2048.webp 1890w"
-																	sizes="(max-width: 2362px) 100vw, 2362px">
+																	srcset="images/tratamentos/cirurgia_cisto-2362x2560.webp 2362w, images/tratamentos/cirurgia_cisto-277x300.webp 277w, images/tratamentos/cirurgia_cisto-945x1024.webp 945w, images/tratamentos/cirurgia_cisto-768x832.webp 768w, images/tratamentos/cirurgia_cisto-1417x1536.webp 1417w, images/tratamentos/cirurgia_cisto-1890x2048.webp 1890w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1345,12 +1332,11 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" decoding="async" width="2362"
-																	height="2560" src="images/tratamentos/cirurgia_intima-2362x2560.webp"
+																<img loading="lazy" decoding="async" width="945"
+																	height="1024" src="images/tratamentos/cirurgia_intima-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Cirurgia Íntima"
-																	srcset="images/tratamentos/cirurgia_intima-2362x2560.webp 2362w, images/tratamentos/cirurgia_intima-277x300.webp 277w, images/tratamentos/cirurgia_intima-945x1024.webp 945w, images/tratamentos/cirurgia_intima-768x832.webp 768w, images/tratamentos/cirurgia_intima-1417x1536.webp 1417w, images/tratamentos/cirurgia_intima-1890x2048.webp 1890w"
-																	sizes="(max-width: 2362px) 100vw, 2362px">
+																	srcset="images/tratamentos/cirurgia_intima-2362x2560.webp 2362w, images/tratamentos/cirurgia_intima-277x300.webp 277w, images/tratamentos/cirurgia_intima-945x1024.webp 945w, images/tratamentos/cirurgia_intima-768x832.webp 768w, images/tratamentos/cirurgia_intima-1417x1536.webp 1417w, images/tratamentos/cirurgia_intima-1890x2048.webp 1890w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1416,12 +1402,11 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" decoding="async" width="2362"
-																	height="2560" src="images/tratamentos/blefaroplastia-2362x2560.webp"
+																<img loading="lazy" decoding="async" width="945"
+																	height="1024" src="images/tratamentos/blefaroplastia-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Blefaroplastia"
-																	srcset="images/tratamentos/blefaroplastia-2362x2560.webp 2362w, images/tratamentos/blefaroplastia-277x300.webp 277w, images/tratamentos/blefaroplastia-945x1024.webp 945w, images/tratamentos/blefaroplastia-768x832.webp 768w, images/tratamentos/blefaroplastia-1417x1536.webp 1417w, images/tratamentos/blefaroplastia-1890x2048.webp 1890w"
-																	sizes="(max-width: 2362px) 100vw, 2362px">
+																	srcset="images/tratamentos/blefaroplastia-2362x2560.webp 2362w, images/tratamentos/blefaroplastia-277x300.webp 277w, images/tratamentos/blefaroplastia-945x1024.webp 945w, images/tratamentos/blefaroplastia-768x832.webp 768w, images/tratamentos/blefaroplastia-1417x1536.webp 1417w, images/tratamentos/blefaroplastia-1890x2048.webp 1890w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1488,12 +1473,11 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" decoding="async" width="2362"
-																	height="2560" src="images/tratamentos/cirurgia_plastica-2362x2560.webp"
+																<img loading="lazy" decoding="async" width="945"
+																	height="1024" src="images/tratamentos/cirurgia_plastica-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Cirurgia Plástica"
-																	srcset="images/tratamentos/cirurgia_plastica-2362x2560.webp 2362w, images/tratamentos/cirurgia_plastica-277x300.webp 277w, images/tratamentos/cirurgia_plastica-945x1024.webp 945w, images/tratamentos/cirurgia_plastica-768x832.webp 768w, images/tratamentos/cirurgia_plastica-1417x1536.webp 1417w, images/tratamentos/cirurgia_plastica-1890x2048.webp 1890w"
-																	sizes="(max-width: 2362px) 100vw, 2362px">
+																	srcset="images/tratamentos/cirurgia_plastica-2362x2560.webp 2362w, images/tratamentos/cirurgia_plastica-277x300.webp 277w, images/tratamentos/cirurgia_plastica-945x1024.webp 945w, images/tratamentos/cirurgia_plastica-768x832.webp 768w, images/tratamentos/cirurgia_plastica-1417x1536.webp 1417w, images/tratamentos/cirurgia_plastica-1890x2048.webp 1890w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -2070,7 +2054,7 @@
 						<div class="elementor-widget-container">
 							<div
 								style="display: flex; justify-content: center; width: 100%; max-width: 400px; margin: 0 auto;">
-								<video width="100%" height="auto" controls poster="images/video-consultorio-poster.webp"
+								<video width="100%" height="auto" controls preload="none" poster="images/video-consultorio-poster.webp"
 									style="border-radius: 8px; box-shadow: 0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15);">
 									<source src="media/consultorio.mp4" type="video/mp4">
 									Seu navegador não suporta a tag de vídeo.

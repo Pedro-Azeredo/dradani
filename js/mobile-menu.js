@@ -1,5 +1,5 @@
 /**
- * Mobile menu toggle - replacement for missing mega-menu bundle
+ * Mobile fullscreen menu toggle
  */
 (function () {
   'use strict';
@@ -11,22 +11,43 @@
     var wrapper = toggleBtn.nextElementSibling;
     if (!wrapper || !wrapper.classList.contains('e-n-menu-wrapper')) return;
 
+    function openMenu() {
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
     toggleBtn.addEventListener('click', function () {
       var expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-      toggleBtn.setAttribute('aria-expanded', String(!expanded));
+      if (expanded) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
     // Close menu when clicking a link
     wrapper.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        toggleBtn.setAttribute('aria-expanded', 'false');
+        closeMenu();
       });
     });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', function (e) {
-      if (!toggleBtn.closest('.e-n-menu').contains(e.target)) {
-        toggleBtn.setAttribute('aria-expanded', 'false');
+    // Close menu when clicking the overlay background
+    wrapper.addEventListener('click', function (e) {
+      if (e.target === wrapper) {
+        closeMenu();
+      }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && toggleBtn.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
       }
     });
   });
