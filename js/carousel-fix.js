@@ -14,6 +14,22 @@ document.addEventListener('DOMContentLoaded', function() {
     if (allSlides.length === 0) return;
     
     const origSlideCount = allSlides.length;
+    const GAP = 10; // px entre slides
+    const VISIBLE = 3; // slides visiveis
+    
+    // Calcula e aplica largura dos slides baseado no container visível
+    const applySlideWidths = () => {
+      const containerWidth = carousel.clientWidth;
+      const slideWidth = (containerWidth - GAP * (VISIBLE - 1)) / VISIBLE;
+      const allCurrent = wrapper.querySelectorAll('.swiper-slide');
+      allCurrent.forEach(slide => {
+        slide.style.width = slideWidth + 'px';
+        slide.style.marginRight = GAP + 'px';
+      });
+      return slideWidth;
+    };
+    
+    applySlideWidths();
     
     // Duplicar os primeiros 3 slides no final (para scroll para frente suave)
     allSlides.slice(0, 3).forEach(slide => {
@@ -21,12 +37,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Duplicar os últimos 3 slides no início (para scroll para trás suave)
-    allSlides.slice(-3).forEach(slide => {
-      wrapper.insertBefore(slide.cloneNode(true), wrapper.firstChild);
-    });
+    // Inserir em ordem reversa para manter a ordem correta [7,8,9] e não [9,8,7]
+    const lastThree = allSlides.slice(-3);
+    for (let i = lastThree.length - 1; i >= 0; i--) {
+      wrapper.insertBefore(lastThree[i].cloneNode(true), wrapper.firstChild);
+    }
     
     // Atualizar referência de todos os slides
     allSlides = Array.from(wrapper.querySelectorAll('.swiper-slide'));
+    
+    // Aplicar larguras nos clones também
+    applySlideWidths();
     
     // Começar no índice 3 (primeiro slide real, pulando as 3 cópias do final que estão no início)
     let currentIndex = 3;
@@ -37,8 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
     let dragOffset = 0;
     
     const getScrollDistance = () => {
-      return allSlides[0].offsetWidth + 10; // slide width + 10px gap
+      const containerWidth = carousel.clientWidth;
+      const slideWidth = (containerWidth - GAP * (VISIBLE - 1)) / VISIBLE;
+      return slideWidth + GAP;
     };
+    
+    // Recalcular no resize
+    window.addEventListener('resize', () => {
+      applySlideWidths();
+      allSlides = Array.from(wrapper.querySelectorAll('.swiper-slide'));
+      moveTo(currentIndex, false);
+    });
     
     const moveTo = (index, smooth = true) => {
       if (isAnimating) return;
@@ -114,8 +144,10 @@ document.addEventListener('DOMContentLoaded', function() {
       moveTo(currentIndex, true);
       
       if (currentIndex <= 2) {
+        // Saltar para a posição real equivalente (clone index + total de slides originais)
+        const resetTo = currentIndex + origSlideCount;
         setTimeout(() => {
-          moveTo(allSlides.length - 6, false);
+          moveTo(resetTo, false);
         }, 350);
       }
       

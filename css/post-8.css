@@ -1332,7 +1332,7 @@
   --container-widget-flex-grow: 0;
   --container-widget-align-self: initial;
   --background-transition: 0.3s;
-  --overlay-opacity: 0.5;
+  --overlay-opacity: 0;
   --padding-block-start: 100px;
   --padding-block-end: 100px;
   --padding-inline-start: 0px;
