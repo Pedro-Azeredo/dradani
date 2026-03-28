@@ -40,21 +40,19 @@
 
 /* ===== CAROUSEL - CORREÇÃO SIMPLES E FUNCIONAL ===== */
 .elementor-element-13ad2d9 .swiper-wrapper {
-    gap: 10px !important;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+  gap: 10px !important;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 .elementor-element-13ad2d9 .swiper-slide {
-    width: calc((100% - 20px) / 3) !important;
-    box-sizing: border-box;
-    flex-shrink: 0;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+  width: calc((100% - 20px) / 3) !important;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
-
- 
