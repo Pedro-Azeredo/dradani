@@ -7,57 +7,57 @@ import re
 with open('index.html', 'r', encoding='utf-8') as f:
     content = f.read()
 
-# 1. Remover comentários do Google Tag Manager para WordPress
+# 1. Remover comentÃ¡rios do Google Tag Manager para WordPress
 content = re.sub(
     r'<!-- Google Tag Manager \(noscript\) -->[\s\S]*?<!-- End Google Tag Manager \(noscript\) -->',
     '',
     content
 )
 
-# 2. Remover o script do Google Tag Manager (noscript) preservando o comentário HTML
+# 2. Remover o script do Google Tag Manager (noscript) preservando o comentÃ¡rio HTML
 content = re.sub(
     r'<noscript><iframe src="https://www\.googletagmanager\.com/ns\.html\?id=GTM-KVGN7652"[\s\S]*?</noscript>',
     '',
     content
 )
 
-# 3. Remover espaços em branco excessivos deixados pela remoção
+# 3. Remover espaÃ§os em branco excessivos deixados pela remoÃ§Ã£o
 content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
 
-# 4. Alterar "Dra Hellen" e variações para "Dra Danielle"
+# 4. Alterar "Dra DANIELLE" e variaÃ§Ãµes para "Dra Danielle"
 content = re.sub(
-    r'Dra Hellen Sonaly',
+    r'Dra Danielle Figueiredo',
     'Dra Danielle Figueiredo',
     content,
     flags=re.IGNORECASE
 )
 
 content = re.sub(
-    r'Dra Hellen',
+    r'Dra DANIELLE',
     'Dra Danielle',
     content,
     flags=re.IGNORECASE
 )
 
-# 5. Alterar nomes de imagens HELLEN para DANIELLE
-# HELLEN-SONALY-logo -> DANIELLE-FIGUEIREDO-logo
+# 5. Alterar nomes de imagens DANIELLE para DANIELLE
+# DANIELLE-FIGUEIREDO-logo -> DANIELLE-FIGUEIREDO-logo
 content = re.sub(
-    r'HELLEN-SONALY-logo',
+    r'DANIELLE-FIGUEIREDO-logo',
     'DANIELLE-FIGUEIREDO-logo',
     content,
     flags=re.IGNORECASE
 )
 
-# DRA-HELLEN -> DRA-DANIELLE
+# DRA-DANIELLE -> DRA-DANIELLE
 content = re.sub(
-    r'DRA-HELLEN',
+    r'DRA-DANIELLE',
     'DRA-DANIELLE',
     content,
     flags=re.IGNORECASE
 )
 
-# 6. Remover referências ao Yoast SEO (JSON-LD schema)
-# Já removido antes, mas garantindo
+# 6. Remover referÃªncias ao Yoast SEO (JSON-LD schema)
+# JÃ¡ removido antes, mas garantindo
 
 # 7. Remover linhas RSS/Feed
 content = re.sub(
@@ -118,21 +118,21 @@ content = re.sub(
     content
 )
 
-# 14. Limpar espaços em branco múltiplos deixados pelas remoções
+# 14. Limpar espaÃ§os em branco mÃºltiplos deixados pelas remoÃ§Ãµes
 content = re.sub(r'\n\n\n+', '\n\n', content)
 
 # Salvar o arquivo modificado
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(content)
 
-print("✓ Arquivo HTML limpo com sucesso!")
-print("\nAlterações realizadas:")
-print("  ✓ Removido Google Tag Manager (noscript)")
-print("  ✓ Removido Yoast SEO schema")
-print("  ✓ Removido feeds RSS")
-print("  ✓ Removido links oEmbed")
-print("  ✓ Removido referências WordPress API")
-print("  ✓ Removido tags generator (WordPress, Elementor)")
-print("  ✓ Removido Facebook domain verification")
-print("  ✓ Alterado 'Hellen Sonaly' → 'Danielle Figueiredo'")
-print("  ✓ Alterado nomes de imagens HELLEN → DANIELLE")
+print("âœ“ Arquivo HTML limpo com sucesso!")
+print("\nAlteraÃ§Ãµes realizadas:")
+print("  âœ“ Removido Google Tag Manager (noscript)")
+print("  âœ“ Removido Yoast SEO schema")
+print("  âœ“ Removido feeds RSS")
+print("  âœ“ Removido links oEmbed")
+print("  âœ“ Removido referÃªncias WordPress API")
+print("  âœ“ Removido tags generator (WordPress, Elementor)")
+print("  âœ“ Removido Facebook domain verification")
+print("  âœ“ Alterado 'Danielle Figueiredo' â†’ 'Danielle Figueiredo'")
+print("  âœ“ Alterado nomes de imagens DANIELLE â†’ DANIELLE")

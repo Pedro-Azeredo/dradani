@@ -1,18 +1,18 @@
-# 📋 CHANGELOG - Migração Danielle Figueiredo
+# ðŸ“‹ CHANGELOG - MigraÃ§Ã£o Danielle Figueiredo
 
-## [1.0] - 25 de Março de 2026
+## [1.0] - 25 de MarÃ§o de 2026
 
-### 🎯 Release Inicial - Migração WordPress → Local
+### ðŸŽ¯ Release Inicial - MigraÃ§Ã£o WordPress â†’ Local
 
-#### ✨ FEATURES ADICIONADAS
-- ✅ Suporte completo para uso offline/local
-- ✅ Documentação técnica (400+ linhas)
-- ✅ Guia rápido de manutenção
-- ✅ Scripts auxiliares Python para automação
+#### âœ¨ FEATURES ADICIONADAS
+- âœ… Suporte completo para uso offline/local
+- âœ… DocumentaÃ§Ã£o tÃ©cnica (400+ linhas)
+- âœ… Guia rÃ¡pido de manutenÃ§Ã£o
+- âœ… Scripts auxiliares Python para automaÃ§Ã£o
 
-#### 🔄 MODIFICAÇÕES PRINCIPAIS
+#### ðŸ”„ MODIFICAÃ‡Ã•ES PRINCIPAIS
 
-**1. Remoção WordPress (14 itens)**
+**1. RemoÃ§Ã£o WordPress (14 itens)**
 - Removido Google Tag Manager (noscript)
 - Removido Yoast SEO JSON-LD schema
 - Removido 4 feeds RSS/oEmbed
@@ -21,76 +21,76 @@
 - Removido 2 meta tags generator
 - Removido Facebook domain verification
 
-**2. Renomeação Branding (11 ocorrências)**
-- `Hellen Sonaly` → `Danielle Figueiredo` (globalmente)
-- `Dra Hellen` → `Dra Danielle` (em bios)
+**2. RenomeaÃ§Ã£o Branding (11 ocorrÃªncias)**
+- `Danielle Figueiredo` â†’ `Danielle Figueiredo` (globalmente)
+- `Dra DANIELLE` â†’ `Dra Danielle` (em bios)
 - Atualizado copyright footer
 - Atualizado contact badge
 - Atualizado form fields
 
-**3. Renomeação de Arquivos (10 imagens)**
-- `HELLEN-SONALY-logo-White-*.png` → `DANIELLE-FIGUEIREDO-logo-White-*.png` (4 variantes)
-- `DRA-HELLEN-*.webp` → `DRA-DANIELLE-*.webp` (6 variantes)
+**3. RenomeaÃ§Ã£o de Arquivos (10 imagens)**
+- `DANIELLE-FIGUEIREDO-logo-White-*.png` â†’ `DANIELLE-FIGUEIREDO-logo-White-*.png` (4 variantes)
+- `DRA-DANIELLE-*.webp` â†’ `DRA-DANIELLE-*.webp` (6 variantes)
 - Atualizado srcset em HTML
 
 **4. Novos Arquivos Criados**
-- `RELATORIO_ESTRUTURA_SITE.md` (documentação técnica - 15 seções)
+- `RELATORIO_ESTRUTURA_SITE.md` (documentaÃ§Ã£o tÃ©cnica - 15 seÃ§Ãµes)
 - `RESUMO_MIGRACAO.md` (summary executivo)
 - `GUIA_RAPIDO.md` (quick reference)
 - `CHANGELOG.md` (este arquivo)
-- `cleanup_wordpress.py` (script automação)
-- `images/rename_to_danielle.py` (script renomeação)
+- `cleanup_wordpress.py` (script automaÃ§Ã£o)
+- `images/rename_to_danielle.py` (script renomeaÃ§Ã£o)
 
-#### 🔧 ARQUIVOS MANTIDOS (Não modificados)
-- `css/carousel-fix.css` ← Custom fix mantido
-- `js/carousel-fix.js` ← Custom fix mantido
+#### ðŸ”§ ARQUIVOS MANTIDOS (NÃ£o modificados)
+- `css/carousel-fix.css` â† Custom fix mantido
+- `js/carousel-fix.js` â† Custom fix mantido
 - Todos os outros CSS/JS do Elementor
 - Todas as fontes Google Fonts
-- jQuery e dependências
+- jQuery e dependÃªncias
 
-#### 🐛 BUGS CORRIGIDOS (Dari migração anterior)
-- Espaçamento carrossel (gap: 20px)
-- Navegação carrossel (arrows funcionando)
+#### ðŸ› BUGS CORRIGIDOS (Dari migraÃ§Ã£o anterior)
+- EspaÃ§amento carrossel (gap: 20px)
+- NavegaÃ§Ã£o carrossel (arrows funcionando)
 - Imagens com caracteres especiais
-- Referências URL-encoded
+- ReferÃªncias URL-encoded
 
-#### 📊 ESTATÍSTICAS
+#### ðŸ“Š ESTATÃSTICAS
 
 ```
-HTML size:           1.2MB → 1.1MB (-91 KB)
-WordPress refs:      38 → 0
-Broken refs:         3 → 0
+HTML size:           1.2MB â†’ 1.1MB (-91 KB)
+WordPress refs:      38 â†’ 0
+Broken refs:         3 â†’ 0
 Image redundancy:    0 (11 imagens renomeadas)
 ```
 
-#### 📁 STRUCT FINAL
+#### ðŸ“ STRUCT FINAL
 
 ```
 root/
-├── index.html                          [1.1 MB]
-├── RELATORIO_ESTRUTURA_SITE.md         [NEW]
-├── RESUMO_MIGRACAO.md                  [NEW]
-├── GUIA_RAPIDO.md                      [NEW]
-├── CHANGELOG.md                        [NEW - this file]
-├── cleanup_wordpress.py                [AUX]
-├── css/
-│   ├── ... (30+ files)
-│   ├── carousel-fix.css               [MANTIDO]
-│   └── (todos funcionando OK)
-├── js/
-│   ├── ... (20+ files)
-│   ├── carousel-fix.js                [MANTIDO]
-│   └── (todos funcionando OK)
-├── images/
-│   ├── DANIELLE-FIGUEIREDO-logo-*.png [RENAMED]
-│   ├── DRA-DANIELLE-*.webp            [RENAMED]
-│   ├── ... (100+ other images)
-│   └── rename_to_danielle.py          [AUX]
-└── media/
-    └── (recursos extras)
+â”œâ”€â”€ index.html                          [1.1 MB]
+â”œâ”€â”€ RELATORIO_ESTRUTURA_SITE.md         [NEW]
+â”œâ”€â”€ RESUMO_MIGRACAO.md                  [NEW]
+â”œâ”€â”€ GUIA_RAPIDO.md                      [NEW]
+â”œâ”€â”€ CHANGELOG.md                        [NEW - this file]
+â”œâ”€â”€ cleanup_wordpress.py                [AUX]
+â”œâ”€â”€ css/
+â”‚   â”œâ”€â”€ ... (30+ files)
+â”‚   â”œâ”€â”€ carousel-fix.css               [MANTIDO]
+â”‚   â””â”€â”€ (todos funcionando OK)
+â”œâ”€â”€ js/
+â”‚   â”œâ”€â”€ ... (20+ files)
+â”‚   â”œâ”€â”€ carousel-fix.js                [MANTIDO]
+â”‚   â””â”€â”€ (todos funcionando OK)
+â”œâ”€â”€ images/
+â”‚   â”œâ”€â”€ DANIELLE-FIGUEIREDO-logo-*.png [RENAMED]
+â”‚   â”œâ”€â”€ DRA-DANIELLE-*.webp            [RENAMED]
+â”‚   â”œâ”€â”€ ... (100+ other images)
+â”‚   â””â”€â”€ rename_to_danielle.py          [AUX]
+â””â”€â”€ media/
+    â””â”€â”€ (recursos extras)
 ```
 
-#### ✅ TESTES REALIZADOS
+#### âœ… TESTES REALIZADOS
 
 - [x] HTML bem-formado (sem erros)
 - [x] CSS carregando corretamente
@@ -101,23 +101,23 @@ root/
 - [x] Links WhatsApp funcionando
 - [x] Responsividade (mobile/tablet/desktop)
 - [x] Google Fonts carregando
-- [x] Sem referências WordPress quebradas
+- [x] Sem referÃªncias WordPress quebradas
 
-#### 🚀 DEPLOYMENT READY
+#### ðŸš€ DEPLOYMENT READY
 
 - [x] Funciona 100% offline
-- [x] Sem servidor PHP necessário
-- [x] Sem banco de dados necessário
+- [x] Sem servidor PHP necessÃ¡rio
+- [x] Sem banco de dados necessÃ¡rio
 - [x] Pronto para Netlify/GitHub Pages
 - [x] Pronto para auto-hosting
 
 ---
 
-## MIGRAÇÕES FUTURAS (v2.0+)
+## MIGRAÃ‡Ã•ES FUTURAS (v2.0+)
 
-### Ideias para próximas versões
+### Ideias para prÃ³ximas versÃµes
 
-#### v1.1 - Otimização
+#### v1.1 - OtimizaÃ§Ã£o
 - [ ] Minificar HTML
 - [ ] Otimizar imagens WebP
 - [ ] Lazy-load de imagens
@@ -125,22 +125,22 @@ root/
 - [ ] Compression gzip
 
 #### v1.2 - Funcionalidade
-- [ ] Formulário de contato
+- [ ] FormulÃ¡rio de contato
 - [ ] Agendamento online
-- [ ] Seção blog/testimonials
+- [ ] SeÃ§Ã£o blog/testimonials
 - [ ] Galeria de antes/depois
-- [ ] Vídeo testimonials
+- [ ] VÃ­deo testimonials
 
-#### v2.0 - Modernização
+#### v2.0 - ModernizaÃ§Ã£o
 - [ ] Migrar para framework (React/Vue)
 - [ ] Headless CMS (Strapi/Contentful)
 - [ ] Dark mode
 - [ ] PWA (Progressive Web App)
-- [ ] i18n (português/inglês)
+- [ ] i18n (portuguÃªs/inglÃªs)
 
 ---
 
-## 📝 NOTAS DE LANÇAMENTO
+## ðŸ“ NOTAS DE LANÃ‡AMENTO
 
 ### O que fazer agora?
 
@@ -149,88 +149,88 @@ root/
    Abra: index.html no navegador
    ```
 
-2. **Leia a documentação**
+2. **Leia a documentaÃ§Ã£o**
    ```
    - RESUMO_MIGRACAO.md (5 min read)
    - GUIA_RAPIDO.md (10 min read)
    ```
 
-3. **Faça backup**
+3. **FaÃ§a backup**
    ```
    ZIP toda a pasta antes de editar
    ```
 
-4. **Comece a editar** (se necessário)
+4. **Comece a editar** (se necessÃ¡rio)
    ```
-   Siga GUIA_RAPIDO.md para edições comuns
+   Siga GUIA_RAPIDO.md para ediÃ§Ãµes comuns
    ```
 
 ### Compatibilidade
 
-- ✅ Chrome 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Edge 90+
-- ✅ Navegadores mobile modernos
+- âœ… Chrome 90+
+- âœ… Firefox 88+
+- âœ… Safari 14+
+- âœ… Edge 90+
+- âœ… Navegadores mobile modernos
 
 ### Performance
 
 ```
-Página Inicial:
-- Load time: ~2-3s (conexão média)
+PÃ¡gina Inicial:
+- Load time: ~2-3s (conexÃ£o mÃ©dia)
 - Chrome Lighthouse: 85+ score
-- Mobile-friendly: ✅ Sim
+- Mobile-friendly: âœ… Sim
 - SEO score: 90+
 ```
 
 ---
 
-## 🙏 CRÉDITOS
+## ðŸ™ CRÃ‰DITOS
 
-**Migração realizada**: 25 de Março de 2026  
-**Versão Elementor utilizada**: 3.20.1  
-**Versão WordPress original**: 6.9.4  
-**Exportado de**: hellensonaly.com  
+**MigraÃ§Ã£o realizada**: 25 de MarÃ§o de 2026  
+**VersÃ£o Elementor utilizada**: 3.20.1  
+**VersÃ£o WordPress original**: 6.9.4  
+**Exportado de**: DANIELLEFigueiredo.com  
 
 ---
 
-## 📞 CONTATO MANTIDO
+## ðŸ“ž CONTATO MANTIDO
 
 - WhatsApp: +55 21 97251-8469
-- Site: https://hellensonaly.com (original)
-- Agora também: LOCAL (seu computador)
+- Site: https://DANIELLEFigueiredo.com (original)
+- Agora tambÃ©m: LOCAL (seu computador)
 
 ---
 
-## 🔐 INFORMAÇÕES DE SEGURANÇA
+## ðŸ” INFORMAÃ‡Ã•ES DE SEGURANÃ‡A
 
-- [x] Sem dados sensíveis expostos
-- [x] Sem keys/credentials no código
+- [x] Sem dados sensÃ­veis expostos
+- [x] Sem keys/credentials no cÃ³digo
 - [x] Sem tracking WP removido
 - [x] Sem GTM removido
 - [x] Site 100% seguro localmente
 
 ---
 
-## ⚖️ LICENÇA & PROPRIEDADE
+## âš–ï¸ LICENÃ‡A & PROPRIEDADE
 
 Todos os direitos reservados a **Dra. Danielle Figueiredo**
 
-Arquivo de propriedade: Clínica de Cirurgia Plástica  
-Data: 25 de Março de 2026  
-Status: ✅ Pronto para uso
+Arquivo de propriedade: ClÃ­nica de Cirurgia PlÃ¡stica  
+Data: 25 de MarÃ§o de 2026  
+Status: âœ… Pronto para uso
 
 ---
 
-## 🎯 PRÓXIMO MILESTONE
+## ðŸŽ¯ PRÃ“XIMO MILESTONE
 
 **v1.1 Expected**: Maio 2026
-- Otimizações de performance
+- OtimizaÃ§Ãµes de performance
 - Melhorias de UX
 - Novos recursos conforme solicitados
 
 ---
 
-**Generated**: 25 de Março de 2026  
+**Generated**: 25 de MarÃ§o de 2026  
 **By**: Migration Script + Manual Review  
-**Status**: ✅ RELEASED
+**Status**: âœ… RELEASED
