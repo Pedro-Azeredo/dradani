@@ -258,16 +258,52 @@
     }
   }
 
-  // Autoplay videos when scrolled into view, pause when out
+  // Carrega os vídeos automáticos somente quando estiverem próximos da tela.
+  // Quando saem da área visível, são pausados para economizar dados e processamento.
   function initVideoAutoplay() {
-    var videos = document.querySelectorAll("video.elementor-video");
+    var videos = document.querySelectorAll("video.elementor-video, video.tratamento-video");
     if (!videos.length) return;
 
-    var videoObserver = new IntersectionObserver(function (entries) {
+    function loadVideo(video) {
+      if (video.dataset.videoLoaded === "true") return;
+
+      var source = video.querySelector("source[data-src]");
+      if (source) {
+        source.src = source.dataset.src;
+        source.removeAttribute("data-src");
+      }
+
+      if (video.dataset.src) {
+        video.src = video.dataset.src;
+        video.removeAttribute("data-src");
+      }
+
+      video.dataset.videoLoaded = "true";
+      video.load();
+    }
+
+    if (!("IntersectionObserver" in window)) {
+      for (var i = 0; i < videos.length; i++) {
+        loadVideo(videos[i]);
+        if (videos[i].autoplay) videos[i].play().catch(function () {});
+      }
+      return;
+    }
+
+    var loadObserver = new IntersectionObserver(function (entries, observer) {
+      for (var i = 0; i < entries.length; i++) {
+        if (!entries[i].isIntersecting) continue;
+        loadVideo(entries[i].target);
+        observer.unobserve(entries[i].target);
+      }
+    }, { rootMargin: "500px 0px", threshold: 0 });
+
+    var playObserver = new IntersectionObserver(function (entries) {
       for (var i = 0; i < entries.length; i++) {
         var video = entries[i].target;
         if (entries[i].isIntersecting) {
-          video.play().catch(function () {});
+          loadVideo(video);
+          if (video.autoplay) video.play().catch(function () {});
         } else {
           video.pause();
         }
@@ -275,7 +311,8 @@
     }, { threshold: 0.3 });
 
     for (var i = 0; i < videos.length; i++) {
-      videoObserver.observe(videos[i]);
+      loadObserver.observe(videos[i]);
+      playObserver.observe(videos[i]);
     }
   }
 
