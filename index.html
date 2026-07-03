@@ -389,6 +389,17 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="preload" as="image" href="images/bg-hero-mobile.webp" media="(max-width: 767px)">
 	<link rel="preload" as="image" href="images/bg-hero.webp" media="(min-width: 768px)">
+	<link rel="preload" as="image" href="images/dra-danielle-rosto-900x1024.webp" fetchpriority="high">
+	<link rel="preload" as="image" href="images/dra-danielle-corpo-inteiro-766x1024.webp" fetchpriority="high">
+	<link rel="preload" as="image" href="images/dra-danielle-corpo-inteiro-1197x1600.webp" fetchpriority="high">
+	<link rel="preload" as="image" href="images/cirurgia-protese-silicone-768x1024.webp" fetchpriority="high">
+	<link rel="preload" as="image" href="images/bg-secao-flores.webp" fetchpriority="auto">
+	<link rel="preload" as="image" href="images/bg-textura.webp" fetchpriority="auto">
+	<link rel="preload" as="image" href="images/bg-footer.webp" fetchpriority="auto">
+	<link rel="preload" as="image" href="images/fraxx-intimo-poster.webp" fetchpriority="high">
+	<link rel="preload" as="image" href="images/acompanhamento-cirurgia-plastica-poster.webp" fetchpriority="high">
+	<link rel="preload" as="image" href="images/video-consultorio-poster-novo.webp" fetchpriority="high">
+	<link rel="preload" as="image" href="images/reels_danielle_cuide_se_poster.webp" fetchpriority="high">
 	<link rel="preload" as="style" id="google-fonts-preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Judson:wght@400;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Judson:wght@400;700&display=swap"></noscript>
 	<script src="js/jquery-bundle.min.js" id="jquery-bundle-js"></script>
@@ -577,6 +588,100 @@
     .brand-wordmark small { font-size: 8px; letter-spacing: .38em; padding-left: .38em; }
     .elementor-element-8973505 img { max-height: 520px; object-position: center 18%; }
   }
+
+
+  /* Correções isoladas: logo em imagem e carrossel de depoimentos */
+  .brand-logo-link,
+  .brand-logo-static {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    line-height: 1;
+  }
+  .brand-logo-link img,
+  .brand-logo-static img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+  }
+  .brand-logo-link { padding: 8px 0; }
+  .brand-logo-link img { width: clamp(180px, 14vw, 235px); }
+  .brand-logo-static { margin: 0 auto 18px; }
+  .brand-logo-static img { width: min(190px, 55vw); height: auto; }
+
+  .elementor-element-8c6bc6b .elementor-element-7e65883 {
+    width: 100%;
+  }
+  .testimonial-slider {
+    width: 100%;
+  }
+  .testimonial-stage {
+    display: grid;
+    width: 100%;
+  }
+  .testimonial-slide {
+    grid-area: 1 / 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity .5s ease, transform .5s ease, visibility .5s ease;
+    pointer-events: none;
+  }
+  .testimonial-slide.is-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .testimonial-quote {
+    margin: 0 0 12px;
+    color: inherit;
+    font: inherit;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  .testimonial-stars {
+    display: block;
+    margin: 0 0 8px;
+    color: #f2b800;
+    font-size: 1.05rem;
+    letter-spacing: .12em;
+    line-height: 1;
+  }
+  .testimonial-author {
+    margin: 0;
+    color: inherit;
+    font-weight: 600;
+  }
+  .testimonial-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 18px;
+  }
+  .testimonial-dot {
+    width: 9px;
+    height: 9px;
+    min-width: 9px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(164, 145, 84, .35);
+    cursor: pointer;
+    transition: transform .25s ease, background-color .25s ease;
+  }
+  .testimonial-dot.is-active {
+    background: #a49154;
+    transform: scale(1.2);
+  }
+  @media (max-width: 767px) {
+    .brand-logo-link img { width: 150px; }
+    .brand-logo-static img { width: 150px; }
+    .testimonial-quote { font-size: .94rem; line-height: 1.55; }
+  }
 </style>
 </head>
 
@@ -612,7 +717,7 @@
 										vertical-align: middle;
 										display: inline-block
 									}
-								</style> <a href="#inicio" class="brand-wordmark" aria-label="Dra. Danielle Figueiredo"><span>Dra. Danielle</span><small>FIGUEIREDO</small></a>
+								</style> <a href="#inicio" class="brand-logo-link" aria-label="D. Mulher"><img loading="eager" decoding="async" width="800" height="149" src="images/logo-dra-danielle-branco-1024x191.png" srcset="images/logo-dra-danielle-branco-300x56.png 300w, images/logo-dra-danielle-branco-768x143.png 768w, images/logo-dra-danielle-branco-1024x191.png 1024w, images/logo-dra-danielle-branco.png 1290w" sizes="(max-width: 800px) 100vw, 800px" alt="D. Mulher" fetchpriority="high"></a>
 							</div>
 						</div>
 						<div class="elementor-element elementor-element-d5a4f9c e-full_width e-n-menu-layout-horizontal e-n-menu-tablet elementor-widget elementor-widget-n-menu"
@@ -650,7 +755,7 @@
 												role="presentation" style="--n-menu-title-order: 3;">
 												<div class="e-n-menu-title-container" aria-current="page">
 													<a class="e-n-menu-title-text e-link e-focus" tabindex="-1"
-														role="menuitem" href="#face"> Saúde da Mulher </a>
+														role="menuitem" href="#face"> Ginecologia </a>
 												</div>
 											</li>
 											<li id="e-n-menu-title-2244" class="e-n-menu-title e-anchor"
@@ -815,8 +920,8 @@
 				<div class="elementor-element elementor-element-acd751a elementor-widget elementor-widget-image"
 					data-id="acd751a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeindown&quot;,&quot;_animation_mobile&quot;:&quot;fadeindown&quot;}" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img loading="lazy" decoding="async" width="170" height="168" src="images/decoracao-ponto.webp"
-							class="attachment-large size-large wp-image-35" alt="" fetchpriority="low">
+						<img loading="eager" decoding="async" width="170" height="168" src="images/decoracao-ponto.webp"
+							class="attachment-large size-large wp-image-35" alt="" fetchpriority="auto">
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-366aec9 elementor-widget elementor-widget-heading"
@@ -915,7 +1020,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<video class="tratamento-video" autoplay muted loop playsinline preload="none" poster="images/fraxx-intimo-poster.webp" aria-label="Procedimento de FRAXX íntimo"><source data-src="media/fraxx-intimo.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
+																<video class="tratamento-video" autoplay muted loop playsinline preload="auto" poster="images/fraxx-intimo-poster.webp" aria-label="Procedimento de FRAXX íntimo"><source src="media/fraxx-intimo.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -968,7 +1073,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="eager" fetchpriority="low" decoding="async" width="945"
+																<img loading="eager" fetchpriority="high" decoding="async" width="945"
 																		height="1024" src="images/tratamentos/implanon-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Implanon"
@@ -1042,7 +1147,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="eager" fetchpriority="low" decoding="async" width="945"
+																<img loading="eager" fetchpriority="high" decoding="async" width="945"
 																		height="1024" src="images/tratamentos/diu-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="DIU"
@@ -1120,7 +1225,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="eager" fetchpriority="low" decoding="async" width="945"
+																<img loading="eager" fetchpriority="high" decoding="async" width="945"
 																		height="1024" src="images/tratamentos/botox-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Botox"
@@ -1180,7 +1285,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" fetchpriority="low" decoding="async" width="945"
+																<img loading="eager" fetchpriority="high" decoding="async" width="945"
 																		height="1024" src="images/tratamentos/labial-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Preenchimento facial e corporal"
@@ -1235,7 +1340,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" fetchpriority="low" decoding="async" width="945"
+																<img loading="eager" fetchpriority="high" decoding="async" width="945"
 																		height="1024" src="images/tratamentos/Bioestimulador-corporal-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Bioestimulador Corporal"
@@ -1304,7 +1409,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" fetchpriority="low" decoding="async" width="945"
+																<img loading="eager" fetchpriority="high" decoding="async" width="945"
 																		height="1024" src="images/tratamentos/cirurgia_cisto-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Cirurgia de Retirada de Cistos"
@@ -1372,7 +1477,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" fetchpriority="low" decoding="async" width="945"
+																<img loading="eager" fetchpriority="high" decoding="async" width="945"
 																		height="1024" src="images/tratamentos/cirurgia_intima-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Cirurgia Íntima"
@@ -1442,7 +1547,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="lazy" fetchpriority="low" decoding="async" width="945"
+																<img loading="eager" fetchpriority="high" decoding="async" width="945"
 																		height="1024" src="images/tratamentos/blefaroplastia-945x1024.webp"
 																	class="attachment-full size-full"
 																	alt="Blefaroplastia"
@@ -1513,7 +1618,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<video class="tratamento-video" autoplay muted loop playsinline preload="none" poster="images/acompanhamento-cirurgia-plastica-poster.webp" aria-label="Acompanhamento para cirurgia plástica"><source data-src="media/acompanhamento-cirurgia-plastica.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
+																<video class="tratamento-video" autoplay muted loop playsinline preload="auto" poster="images/acompanhamento-cirurgia-plastica-poster.webp" aria-label="Acompanhamento para cirurgia plástica"><source src="media/acompanhamento-cirurgia-plastica.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1624,9 +1729,9 @@
 						data-id="2c61892" data-element_type="widget" data-settings="{&quot;motion_fx_motion_fx_mouse&quot;:&quot;yes&quot;,&quot;motion_fx_tilt_effect&quot;:&quot;yes&quot;,&quot;motion_fx_tilt_speed&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.9,&quot;sizes&quot;:[]},&quot;_animation&quot;:&quot;zoomin&quot;}"
 						data-widget_type="image.default">
 						<div class="elementor-widget-container">
-							<img loading="lazy" decoding="async" width="800" height="910"
+							<img loading="eager" decoding="async" width="800" height="910"
 								src="images/dra-danielle-rosto-900x1024.webp" class="attachment-large size-large wp-image-12" alt=""
-								srcset="images/dra-danielle-rosto-900x1024.webp 900w, images/dra-danielle-rosto-264x300.webp 264w, images/dra-danielle-rosto-768x874.webp 768w, images/dra-danielle-rosto-1204.webp 1204w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="low">
+								srcset="images/dra-danielle-rosto-900x1024.webp 900w, images/dra-danielle-rosto-264x300.webp 264w, images/dra-danielle-rosto-768x874.webp 768w, images/dra-danielle-rosto-1204.webp 1204w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high">
 						</div>
 					</div>
 				</div>
@@ -1648,11 +1753,11 @@
 					<div class="elementor-element elementor-element-422e1c9 elementor-widget elementor-widget-image"
 						data-id="422e1c9" data-element_type="widget" data-widget_type="image.default">
 						<div class="elementor-widget-container">
-							<img loading="lazy" decoding="async" width="766" height="1024"
+							<img loading="eager" decoding="async" width="766" height="1024"
 								src="images/dra-danielle-corpo-inteiro-766x1024.webp"
 								class="attachment-large size-large wp-image-295" alt=""
 								srcset="images/dra-danielle-corpo-inteiro-766x1024.webp 766w, images/dra-danielle-corpo-inteiro-244x300.webp 244w, images/dra-danielle-corpo-inteiro-768x1027.webp 768w, images/dra-danielle-corpo-inteiro-1149x1536.webp 1149w, images/dra-danielle-corpo-inteiro-1197x1600.webp 1197w"
-								sizes="(max-width: 766px) 100vw, 766px" fetchpriority="low">
+								sizes="(max-width: 766px) 100vw, 766px" fetchpriority="high">
 						</div>
 					</div>
 				</div>
@@ -1739,7 +1844,7 @@
 				<div class="elementor-element elementor-element-de22ad9 elementor-widget elementor-widget-image"
 					data-id="de22ad9" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img loading="lazy" decoding="async" width="1197" height="1600" src="images/dra-danielle-corpo-inteiro-1197x1600.webp" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/dra-danielle-corpo-inteiro-1197x1600.webp 1197w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="low">
+						<img loading="eager" decoding="async" width="1197" height="1600" src="images/dra-danielle-corpo-inteiro-1197x1600.webp" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/dra-danielle-corpo-inteiro-1197x1600.webp 1197w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high">
 					</div>
 				</div>
 			</div>
@@ -1755,7 +1860,7 @@
 				<div class="elementor-element elementor-element-8973505 elementor-hidden-desktop elementor-widget elementor-widget-image"
 					data-id="8973505" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img loading="lazy" decoding="async" width="1197" height="1600" src="images/dra-danielle-corpo-inteiro-1197x1600.webp" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/dra-danielle-corpo-inteiro-1197x1600.webp 1197w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="low">
+						<img loading="eager" decoding="async" width="1197" height="1600" src="images/dra-danielle-corpo-inteiro-1197x1600.webp" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/dra-danielle-corpo-inteiro-1197x1600.webp 1197w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high">
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-c769f57 elementor-widget elementor-widget-heading"
@@ -1794,11 +1899,11 @@
 					<div class="elementor-element elementor-element-eb36001 elementor-hidden-desktop elementor-widget elementor-widget-image"
 						data-id="eb36001" data-element_type="widget" data-widget_type="image.default">
 						<div class="elementor-widget-container">
-							<img loading="lazy" decoding="async" width="1615" height="1282"
+							<img loading="eager" decoding="async" width="1615" height="1282"
 								src="images/equipe-clinica.webp" class="attachment-full size-full wp-image-360"
 								alt=""
 								srcset="images/equipe-clinica.webp 1615w, images/equipe-clinica-1024x813.webp 1024w, images/equipe-clinica-1536x1219.webp 1536w"
-								sizes="(max-width: 1615px) 100vw, 1615px" fetchpriority="low">
+								sizes="(max-width: 1615px) 100vw, 1615px" fetchpriority="auto">
 						</div>
 					</div>
 					<div class="elementor-element elementor-element-7f67c19 elementor-widget elementor-widget-heading"
@@ -1815,109 +1920,41 @@
 					</div>
 					<div class="elementor-element elementor-element-7e65883 e-con-full e-flex e-con e-child"
 						data-id="7e65883" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-						<div class="elementor-element elementor-element-162f271 elementor-widget elementor-widget-text-editor"
-							data-id="162f271" data-element_type="widget" data-widget_type="text-editor.default">
-							<div class="elementor-widget-container">
-								“Dra. Danielle, você fez toda a diferença. Mesmo eu sem acreditar na possibilidade dessa
-								transformação, você me conduziu com segurança, atenção e amor em cada etapa. Gratidão
-								eterna por tudo, especialmente por ter sido fundamental na retirada do melanoma.” </div>
-						</div>
-						<div class="elementor-element elementor-element-cf78244 e-flex e-con-boxed e-con e-child"
-							data-id="cf78244" data-element_type="container">
-							<div class="e-con-inner">
-								<div class="elementor-element elementor-element-722f8ec elementor-view-default elementor-widget elementor-widget-icon"
-									data-id="722f8ec" data-element_type="widget" data-widget_type="icon.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-icon-wrapper">
-											<div class="elementor-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-star"
-													viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-													</path>
-												</svg>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-612f5f0 elementor-view-default elementor-widget elementor-widget-icon"
-									data-id="612f5f0" data-element_type="widget" data-widget_type="icon.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-icon-wrapper">
-											<div class="elementor-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-star"
-													viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-													</path>
-												</svg>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-f7a6e95 elementor-view-default elementor-widget elementor-widget-icon"
-									data-id="f7a6e95" data-element_type="widget" data-widget_type="icon.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-icon-wrapper">
-											<div class="elementor-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-star"
-													viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-													</path>
-												</svg>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-aea7913 elementor-view-default elementor-widget elementor-widget-icon"
-									data-id="aea7913" data-element_type="widget" data-widget_type="icon.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-icon-wrapper">
-											<div class="elementor-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-star"
-													viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-													</path>
-												</svg>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="elementor-element elementor-element-d33377f elementor-view-default elementor-widget elementor-widget-icon"
-									data-id="d33377f" data-element_type="widget" data-widget_type="icon.default">
-									<div class="elementor-widget-container">
-										<div class="elementor-icon-wrapper">
-											<div class="elementor-icon">
-												<svg aria-hidden="true" class="e-font-icon-svg e-fas-star"
-													viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg">
-													<path
-														d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z">
-													</path>
-												</svg>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="elementor-element elementor-element-d2e20cd elementor-widget elementor-widget-text-editor"
-							data-id="d2e20cd" data-element_type="widget" data-widget_type="text-editor.default">
-							<div class="elementor-widget-container">
-								Lorimar Dornelas – 48 anos </div>
-						</div>
-					</div>
+                        <div class="testimonial-slider" id="testimonial-slider">
+                            <div class="testimonial-stage">
+                                <article class="testimonial-slide is-active" aria-hidden="false">
+                                    <p class="testimonial-quote">“Dra. Danielle, você fez toda a diferença. Mesmo eu sem acreditar na possibilidade dessa transformação, você me conduziu com segurança, atenção e amor em cada etapa. Gratidão eterna por tudo, especialmente por ter sido fundamental na retirada do melanoma.”</p>
+                                    <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
+                                    <p class="testimonial-author">Lorimar Dornelas – 48 anos</p>
+                                </article>
+                                <article class="testimonial-slide" aria-hidden="true">
+                                    <p class="testimonial-quote">“Tenho muito orgulho e gratidão por fazer parte da sua trajetória como paciente. Que Deus continue iluminando seus caminhos e seu propósito.”</p>
+                                    <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
+                                    <p class="testimonial-author">Paciente – relato público</p>
+                                </article>
+                                <article class="testimonial-slide" aria-hidden="true">
+                                    <p class="testimonial-quote">“Tenho 53 anos, estou no pós-menopausa e estou indo para o meu quarto ano de reposição hormonal.”</p>
+                                    <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
+                                    <p class="testimonial-author">Paciente – acompanhamento da menopausa</p>
+                                </article>
+                            </div>
+                            <div class="testimonial-dots" aria-label="Selecionar depoimento">
+                                <button class="testimonial-dot is-active" type="button" aria-label="Ver depoimento 1" aria-pressed="true"></button>
+                                <button class="testimonial-dot" type="button" aria-label="Ver depoimento 2" aria-pressed="false"></button>
+                                <button class="testimonial-dot" type="button" aria-label="Ver depoimento 3" aria-pressed="false"></button>
+                            </div>
+                        </div>
+                    </div>
 				</div>
 				<div class="elementor-element elementor-element-94677e7 e-con-full e-flex e-con e-child"
 					data-id="94677e7" data-element_type="container">
 					<div class="elementor-element elementor-element-9f08402 elementor-hidden-mobile elementor-widget elementor-widget-image"
 						data-id="9f08402" data-element_type="widget" data-widget_type="image.default">
 						<div class="elementor-widget-container">
-							<img loading="lazy" decoding="async" width="800" height="635"
+							<img loading="eager" decoding="async" width="800" height="635"
 								src="images/equipe-clinica-1024x813.webp"
 								class="attachment-large size-large wp-image-360" alt=""
-								srcset="images/equipe-clinica-1024x813.webp 1024w, images/equipe-clinica-1536x1219.webp 1536w, images/equipe-clinica.webp 1615w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="low">
+								srcset="images/equipe-clinica-1024x813.webp 1024w, images/equipe-clinica-1536x1219.webp 1536w, images/equipe-clinica.webp 1615w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="auto">
 						</div>
 					</div>
 					<div class="elementor-element elementor-element-8ea7795 elementor-align-center elementor-widget elementor-widget-button"
@@ -1980,17 +2017,17 @@
 				<div class="elementor-element elementor-element-0b88f89 elementor-widget elementor-widget-image"
 					data-id="0b88f89" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img loading="lazy" decoding="async" width="768" height="1024"
+						<img loading="eager" decoding="async" width="768" height="1024"
 							src="images/cirurgia-protese-silicone-768x1024.webp" class="attachment-large size-large wp-image-331"
 							alt=""
 							srcset="images/cirurgia-protese-silicone-768x1024.webp 768w, images/cirurgia-protese-silicone-225x300.webp 225w, images/cirurgia-protese-silicone-1152x1536.webp 1152w, images/cirurgia-protese-silicone-1536x2048.webp 1536w, images/cirurgia-protese-silicone-scaled.webp 1920w"
-							sizes="(max-width: 768px) 100vw, 768px" fetchpriority="low">
+							sizes="(max-width: 768px) 100vw, 768px" fetchpriority="high">
 					</div>
 				</div>
 			</div>
 			<div class="elementor-element elementor-element-0068b3e e-con-full e-flex e-con e-child" data-id="0068b3e"
 				data-element_type="container">
-				<div class="elementor-element elementor-element-48b5ef2 justificado elementor-widget elementor-widget-heading"
+				<div class="elementor-element elementor-element-48b5ef2 elementor-widget elementor-widget-heading"
 					data-id="48b5ef2" data-element_type="widget" data-widget_type="heading.default">
 					<div class="elementor-widget-container">
 						<p class="elementor-heading-title elementor-size-default"> A autoestima reflete o cuidado que
@@ -2038,7 +2075,7 @@
 						<div class="elementor-widget-container">
 							<div
 								style="display: flex; justify-content: center; width: 100%; max-width: 400px; margin: 0 auto;">
-								<video width="100%" height="auto" controls preload="none" poster="images/video-consultorio-poster-novo.webp"
+								<video width="100%" height="auto" controls preload="auto" poster="images/video-consultorio-poster-novo.webp"
 									style="border-radius: 8px; box-shadow: 0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15);">
 									<source src="media/consultorio-editado.mp4" type="video/mp4">
 									Seu navegador não suporta a tag de vídeo.
@@ -2194,8 +2231,8 @@
 								}
 							</style>
 							<div class="e-hosted-video elementor-wrapper elementor-open-inline">
-								<video class="elementor-video" data-src="media/reels_danielle_cuide_se.mp4" autoplay
-									muted playsinline loop disablepictureinpicture preload="none"
+								<video class="elementor-video" src="media/reels_danielle_cuide_se.mp4" autoplay
+									muted playsinline loop disablepictureinpicture preload="auto"
 									poster="images/reels_danielle_cuide_se_poster.webp"
 									style="pointer-events: none;"></video>
 							</div>
@@ -2227,9 +2264,9 @@
 								<div class="elementor-element elementor-element-9c84130 elementor-widget elementor-widget-image"
 									data-id="9c84130" data-element_type="widget" data-widget_type="image.default">
 									<div class="elementor-widget-container">
-										<img loading="lazy" decoding="async" width="6" height="298"
+										<img loading="eager" decoding="async" width="6" height="298"
 											src="images/decoracao-linha-vertical.webp"
-											class="attachment-large size-large wp-image-269" alt="" fetchpriority="low">
+											class="attachment-large size-large wp-image-269" alt="" fetchpriority="auto">
 									</div>
 								</div>
 							</div>
@@ -2238,8 +2275,8 @@
 								<div class="elementor-element elementor-element-f33746e elementor-hidden-mobile elementor-widget elementor-widget-image"
 									data-id="f33746e" data-element_type="widget" data-widget_type="image.default">
 									<div class="elementor-widget-container">
-										<img loading="lazy" decoding="async" width="170" height="168" src="images/decoracao-ponto.webp"
-											class="attachment-large size-large wp-image-35" alt="" fetchpriority="low">
+										<img loading="eager" decoding="async" width="170" height="168" src="images/decoracao-ponto.webp"
+											class="attachment-large size-large wp-image-35" alt="" fetchpriority="auto">
 									</div>
 								</div>
 							</div>
@@ -2614,7 +2651,7 @@
 				<div class="elementor-element elementor-element-75db22a elementor-widget elementor-widget-image"
 					data-id="75db22a" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<div class="brand-wordmark brand-wordmark-footer" aria-label="Dra. Danielle Figueiredo"><span>Dra. Danielle</span><small>FIGUEIREDO</small></div>
+						<div class="brand-logo-static" aria-label="D. Mulher"><img fetchpriority="auto" loading="eager" decoding="async" src="images/logo-d-mulher-simple-dark.png" alt="D. Mulher" width="190" height="35"></div>
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-7230719 e-flex e-con-boxed e-con e-child"
@@ -3169,6 +3206,65 @@
 		});
 	})();
 	</script>
+
+
+
+    <script id="testimonial-slider-script">
+    (function () {
+        var slider = document.getElementById('testimonial-slider');
+        if (!slider) return;
+
+        var slides = Array.prototype.slice.call(slider.querySelectorAll('.testimonial-slide'));
+        var dots = Array.prototype.slice.call(slider.querySelectorAll('.testimonial-dot'));
+        if (slides.length !== 3 || dots.length !== 3) return;
+
+        var current = 0;
+        var timer = null;
+
+        function show(index) {
+            current = (index + slides.length) % slides.length;
+            slides.forEach(function (slide, i) {
+                var active = i === current;
+                slide.classList.toggle('is-active', active);
+                slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+            });
+            dots.forEach(function (dot, i) {
+                var active = i === current;
+                dot.classList.toggle('is-active', active);
+                dot.setAttribute('aria-pressed', active ? 'true' : 'false');
+            });
+        }
+
+        function stop() {
+            if (timer !== null) {
+                window.clearInterval(timer);
+                timer = null;
+            }
+        }
+
+        function start() {
+            stop();
+            timer = window.setInterval(function () {
+                show(current + 1);
+            }, 5000);
+        }
+
+        dots.forEach(function (dot, index) {
+            dot.addEventListener('click', function () {
+                show(index);
+                start();
+            });
+        });
+
+        slider.addEventListener('mouseenter', stop);
+        slider.addEventListener('mouseleave', start);
+        slider.addEventListener('focusin', stop);
+        slider.addEventListener('focusout', start);
+
+        show(0);
+        start();
+    })();
+    </script>
 
 </body>
 
