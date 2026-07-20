@@ -391,7 +391,7 @@
 	<link rel="preload" as="image" href="images/bg-hero.webp" media="(min-width: 768px)">
 	<link rel="preload" as="image" href="images/dra-danielle-rosto-900x1024.webp" fetchpriority="high">
 	<link rel="preload" as="image" href="images/dra-danielle-corpo-inteiro-766x1024.webp" fetchpriority="high">
-	<link rel="preload" as="image" href="images/dra-danielle-corpo-inteiro-1197x1600.webp" fetchpriority="high">
+	<link rel="preload" as="image" href="images/dra-danielle-ia-retrato.webp" fetchpriority="high">
 	<link rel="preload" as="image" href="images/cirurgia-protese-silicone-768x1024.webp" fetchpriority="high">
 	<link rel="preload" as="image" href="images/bg-secao-flores.webp" fetchpriority="auto">
 	<link rel="preload" as="image" href="images/bg-textura.webp" fetchpriority="auto">
@@ -683,7 +683,150 @@
     .testimonial-quote { font-size: .94rem; line-height: 1.55; }
   }
 </style>
-</head>
+<style>
+		.ebook-section {
+			position: relative;
+			margin-top: -20px;
+			padding: 90px 20px 70px;
+			background: linear-gradient(135deg, #d9c9ae 0%, #e6d8bf 45%, #f7f0e6 100%);
+			box-shadow: inset 0 18px 40px rgba(255,255,255,0.28);
+			overflow: hidden;
+		}
+		.ebook-section::before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: -1px;
+			width: 120%;
+			height: 90px;
+			transform: translateX(-50%);
+			background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0) 70%);
+			border-radius: 0 0 50% 50%;
+			pointer-events: none;
+		}
+		.ebook-container {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			gap: 88px;
+			max-width: 1320px;
+			margin: 0 auto;
+			padding: 28px 20px;
+		}
+		.ebook-image {
+			flex: 0 0 320px;
+		}
+		.ebook-image img {
+			max-width: 320px;
+			width: 100%;
+			height: auto;
+			border-radius: 10px;
+			box-shadow: 0 12px 24px rgba(0,0,0,0.16);
+		}
+		.ebook-content {
+			max-width: 760px;
+			padding: 8px 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.ebook-badge {
+			display: inline-block;
+			background-color: #d4af37;
+			color: #fff;
+			padding: 5px 12px;
+			border-radius: 20px;
+			font-size: 0.85rem;
+			font-family: "Poppins", sans-serif;
+			font-weight: 600;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+		}
+		.ebook-title {
+			font-size: clamp(2.4rem, 3.2vw, 3.1rem);
+			margin-bottom: 20px;
+			line-height: 1.08;
+			color: #2b2b2b;
+			font-family: "Judson", serif;
+			font-weight: 700;
+			letter-spacing: 0.01em;
+			text-transform: uppercase;
+			max-width: 100%;
+		}
+		.ebook-description {
+			font-size: 1.05rem;
+			margin: 0 0 16px;
+			line-height: 1.8;
+			color: #444;
+			font-family: "Poppins", sans-serif;
+			max-width: 700px;
+			text-align: left;
+			text-wrap: pretty;
+		}
+		.ebook-description + .ebook-description {
+			margin-top: 6px;
+		}
+		.ebook-description:last-of-type {
+			margin-bottom: 28px;
+		}
+		.btn-cta-ebook {
+			display: inline-block;
+			background-color: #2b2b2b;
+			color: #fff;
+			padding: 15px 30px;
+			font-size: 1.1rem;
+			font-weight: bold;
+			text-decoration: none;
+			border-radius: 5px;
+			transition: all .3s;
+			box-shadow: none;
+		}
+		.btn-cta-ebook:hover {
+			background-color: #444;
+			color: #fff;
+			transform: none;
+			box-shadow: none;
+		}
+		.cirurgia-plastica-info {
+			max-width: 760px;
+			margin: 0 auto;
+			padding: 0 10px;
+		}
+		.cirurgia-plastica-info h3 {
+			margin-bottom: 16px;
+			color: inherit;
+		}
+		.cirurgia-plastica-info p {
+			line-height: 1.7;
+			color: inherit;
+			margin-bottom: 14px;
+		}
+		.btn-parceria-instagram {
+			display: inline-flex;
+			align-items: center;
+			margin-top: 15px;
+			background-color: #ffffff;
+			color: #c13584;
+			border: 1px solid #ffffff;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+			padding: 10px 20px;
+			font-weight: 600;
+			text-decoration: none;
+			border-radius: 5px;
+			transition: all 0.3s ease;
+		}
+		.btn-parceria-instagram:hover {
+			background-color: #c13584;
+			color: #ffffff;
+		}
+		@media (max-width: 768px) {
+			.ebook-container {
+				flex-direction: column;
+				text-align: center;
+			}
+		}
+	</style>
+	</head>
 
 <body
 	class="home wp-singular page-template page-template-elementor_canvas page page-id-8 wp-theme-hello-elementor elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-8">
@@ -831,7 +974,7 @@
 												font-size: 59px
 											}
 										</style>
-										<h1 class="elementor-heading-title elementor-size-default">Dra. Danielle Figueiredo</h1>
+										<h1 class="elementor-heading-title elementor-size-default">Dra. Danielle Azeredo<br>Figueiredo</h1>
 									</div>
 								</div>
 								<div class="elementor-element elementor-element-337ea43 elementor-widget elementor-widget-text-editor"
@@ -1008,7 +1151,7 @@
 											}
 										</style>
 										<div data-elementor-type="loop-item" data-elementor-id="166"
-											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-238 post-238 tratamento type-tratamento status-publish has-post-thumbnail hentry"
+											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-246 post-246 tratamento type-tratamento status-publish has-post-thumbnail hentry"
 											data-elementor-post-type="elementor_library" role="group"
 											aria-roledescription="slide" data-custom-edit-handle="1">
 											<div class="elementor-section-wrap">
@@ -1020,7 +1163,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<video class="tratamento-video" autoplay muted loop playsinline preload="auto" poster="images/fraxx-intimo-poster.webp" aria-label="Procedimento de FRAXX íntimo"><source src="media/fraxx-intimo.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
+																<video class="tratamento-video" autoplay muted loop playsinline preload="auto" poster="images/acompanhamento-cirurgia-plastica-poster.webp" aria-label="Acompanhamento para cirurgia plástica"><source src="media/acompanhamento-cirurgia-plastica.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1033,7 +1176,7 @@
 																	<div class="elementor-widget-container">
 																		<h1
 																			class="elementor-heading-title elementor-size-default">
-																			FRAXX ÍNTIMO</h1>
+																			ACOMPANHAMENTO PARA CIRURGIA PLÁSTICA</h1>
 																	</div>
 																</div>
 																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
@@ -1041,17 +1184,21 @@
 																	data-widget_type="theme-post-content.default">
 																	<div class="elementor-widget-container">
 
-																		<p>O FRAXX Íntimo é um tratamento realizado por radiofrequência fracionada, indicado para promover renovação tecidual e estimular a produção de colágeno na região íntima feminina.</p>
-
-                                                                            <p>A indicação é individualizada e definida após avaliação médica, considerando as necessidades, expectativas e condições de saúde de cada paciente.</p>
-
-                                                                            <ul class="wp-block-list">
-                                                                                <li>Estímulo à produção de colágeno.</li>
-                                                                                <li>Melhora da firmeza e da qualidade da pele.</li>
-                                                                                <li>Auxílio no rejuvenescimento íntimo.</li>
-                                                                                <li>Procedimento realizado com planejamento personalizado.</li>
-                                                                                <li>Acompanhamento médico antes e depois do tratamento.</li>
-                                                                            </ul>
+																		<div class="cirurgia-plastica-info">
+												
+												<p>
+													As cirurgias plásticas são realizadas em parceria com o <strong>Dr. Gustavo Pimenta</strong>. Meu papel inclui o acompanhamento completo da paciente, desde a avaliação pré-operatória até o pós-operatório, participando também do procedimento cirúrgico como auxiliar do cirurgião.
+												</p>
+												<p>
+													Dessa forma, oferecemos um atendimento integrado e personalizado em todas as etapas do processo, garantindo a sua segurança e conforto.
+												</p>
+												<a href="https://instagram.com/dra.daniellefigueiredo" class="btn-parceria-instagram" target="_blank" rel="noopener noreferrer">
+													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px;">
+														<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+													</svg>
+													Conheça o Dr. Gustavo Pimenta
+												</a>
+											</div>
 																	</div>
 																</div>
 															</div>
@@ -1059,8 +1206,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div data-elementor-type="loop-item" data-elementor-id="166"
+										</div><div data-elementor-type="loop-item" data-elementor-id="166"
 											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-247 post-247 tratamento type-tratamento status-publish has-post-thumbnail hentry"
 											data-elementor-post-type="elementor_library" role="group"
 											aria-roledescription="slide" data-custom-edit-handle="1">
@@ -1075,9 +1221,9 @@
 															<div class="elementor-widget-container">
 																<img loading="eager" fetchpriority="high" decoding="async" width="945"
 																		height="1024" src="images/tratamentos/implanon-945x1024.webp"
-																	class="attachment-full size-full"
-																	alt="Implanon"
-																	srcset="images/tratamentos/implanon-277x300.webp 277w, images/tratamentos/implanon-768x832.webp 768w, images/tratamentos/implanon-945x1024.webp 945w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
+																		class="attachment-full size-full"
+																		alt="Implanon"
+																		srcset="images/tratamentos/implanon-277x300.webp 277w, images/tratamentos/implanon-768x832.webp 768w, images/tratamentos/implanon-945x1024.webp 945w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1133,8 +1279,172 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div data-elementor-type="loop-item" data-elementor-id="166"
+										</div><div data-elementor-type="loop-item" data-elementor-id="166"
+											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-238 post-238 tratamento type-tratamento status-publish has-post-thumbnail hentry"
+											data-elementor-post-type="elementor_library" role="group"
+											aria-roledescription="slide" data-custom-edit-handle="1">
+											<div class="elementor-section-wrap">
+												<div class="elementor-element elementor-element-a254893 e-flex e-con-boxed e-con e-parent"
+													data-id="a254893" data-element_type="container"
+													data-core-v316-plus="true">
+													<div class="e-con-inner">
+														<div class="elementor-element elementor-element-1e83fec elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
+															data-id="1e83fec" data-element_type="widget"
+															data-widget_type="theme-post-featured-image.default">
+															<div class="elementor-widget-container">
+																<video class="tratamento-video" autoplay muted loop playsinline preload="auto" poster="images/fraxx-intimo-poster.webp" aria-label="Procedimento de FRAXX íntimo"><source src="media/fraxx-intimo.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
+															data-id="c9e9f59" data-element_type="container"
+															data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+															<div class="e-con-inner">
+																<div class="elementor-element elementor-element-835e68f elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
+																	data-id="835e68f" data-element_type="widget"
+																	data-widget_type="theme-post-title.default">
+																	<div class="elementor-widget-container">
+																		<h1
+																			class="elementor-heading-title elementor-size-default">
+																			FRAXX ÍNTIMO</h1>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
+																	data-id="1d14a0a" data-element_type="widget"
+																	data-widget_type="theme-post-content.default">
+																	<div class="elementor-widget-container">
+
+																		<p>O FRAXX Íntimo é um tratamento realizado por radiofrequência fracionada, indicado para promover renovação tecidual e estimular a produção de colágeno na região íntima feminina.</p>
+
+                                                                            <p>A indicação é individualizada e definida após avaliação médica, considerando as necessidades, expectativas e condições de saúde de cada paciente.</p>
+
+                                                                            <ul class="wp-block-list">
+                                                                                <li>Estímulo à produção de colágeno.</li>
+                                                                                <li>Melhora da firmeza e da qualidade da pele.</li>
+                                                                                <li>Auxílio no rejuvenescimento íntimo.</li>
+                                                                                <li>Procedimento realizado com planejamento personalizado.</li>
+                                                                                <li>Acompanhamento médico antes e depois do tratamento.</li>
+                                                                            </ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div><div data-elementor-type="loop-item" data-elementor-id="166"
+											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-239 post-239 tratamento type-tratamento status-publish has-post-thumbnail hentry"
+											data-elementor-post-type="elementor_library" role="group"
+											aria-roledescription="slide" data-custom-edit-handle="1">
+											<div class="elementor-section-wrap">
+												<div class="elementor-element elementor-element-a254893 e-flex e-con-boxed e-con e-parent"
+													data-id="a254893" data-element_type="container"
+													data-core-v316-plus="true">
+													<div class="e-con-inner">
+														<div class="elementor-element elementor-element-1e83fec elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
+															data-id="1e83fec" data-element_type="widget"
+															data-widget_type="theme-post-featured-image.default">
+															<div class="elementor-widget-container">
+																<img loading="eager" fetchpriority="high" decoding="async" width="945"
+																		height="1024" src="images/tratamentos/preenchimento-novo.png"
+																	class="attachment-full size-full"
+																	alt="Preenchimento facial e corporal"
+																	srcset="images/tratamentos/preenchimento-novo.png 945w" sizes="(max-width: 1024px) 50vw, 33vw">
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
+															data-id="c9e9f59" data-element_type="container"
+															data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+															<div class="e-con-inner">
+																<div class="elementor-element elementor-element-835e68f elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
+																	data-id="835e68f" data-element_type="widget"
+																	data-widget_type="theme-post-title.default">
+																	<div class="elementor-widget-container">
+																		<h1
+																			class="elementor-heading-title elementor-size-default">
+																			PREENCHIMENTO FACIAL E CORPORAL </h1>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
+																	data-id="1d14a0a" data-element_type="widget"
+																	data-widget_type="theme-post-content.default">
+																	<div class="elementor-widget-container">
+
+																		<p>Os preenchimentos facial e corporal são procedimentos minimamente invasivos, planejados de forma individualizada para melhorar contornos, proporções e pontos específicos, sempre priorizando resultados naturais e harmônicos.</p>
+
+                                                                            <ul class="wp-block-list">
+                                                                                <li>Planejamento personalizado para cada região.</li>
+                                                                                <li>Melhora de contornos e proporções.</li>
+                                                                                <li>Correção de pequenas assimetrias.</li>
+                                                                                <li>Valorização da harmonia facial e corporal.</li>
+                                                                                <li>Resultados graduais e alinhados às expectativas da paciente.</li>
+                                                                            </ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div><div data-elementor-type="loop-item" data-elementor-id="166"
+											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-240 post-240 tratamento type-tratamento status-publish has-post-thumbnail hentry"
+											data-elementor-post-type="elementor_library" role="group"
+											aria-roledescription="slide" data-custom-edit-handle="1">
+											<div class="elementor-section-wrap">
+												<div class="elementor-element elementor-element-a254893 e-flex e-con-boxed e-con e-parent"
+													data-id="a254893" data-element_type="container"
+													data-core-v316-plus="true">
+													<div class="e-con-inner">
+														<div class="elementor-element elementor-element-1e83fec elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
+															data-id="1e83fec" data-element_type="widget"
+															data-widget_type="theme-post-featured-image.default">
+															<div class="elementor-widget-container">
+																<img loading="eager" fetchpriority="high" decoding="async" width="945"
+																		height="1024" src="images/tratamentos/botox-novo.png"
+																	class="attachment-full size-full"
+																	alt="Botox"
+																	srcset="images/tratamentos/botox-novo.png 945w" sizes="(max-width: 1024px) 50vw, 33vw">
+															</div>
+														</div>
+														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
+															data-id="c9e9f59" data-element_type="container"
+															data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+															<div class="e-con-inner">
+																<div class="elementor-element elementor-element-835e68f elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
+																	data-id="835e68f" data-element_type="widget"
+																	data-widget_type="theme-post-title.default">
+																	<div class="elementor-widget-container">
+																		<h1
+																			class="elementor-heading-title elementor-size-default">
+																			BOTOX </h1>
+																	</div>
+																</div>
+																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
+																	data-id="1d14a0a" data-element_type="widget"
+																	data-widget_type="theme-post-content.default">
+																	<div class="elementor-widget-container">
+
+																		<p>A toxina botulínica, conhecida popularmente
+																			como Botox®, é um tratamento estético seguro
+																			e eficaz para suavizar rugas e linhas de
+																			expressão.
+																			Sua ação ocorre ao relaxar temporariamente
+																			os músculos responsáveis pelas marcas
+																			dinâmicas do rosto, proporcionando uma
+																			aparência mais descansada e rejuvenescida 
+																		</p>
+
+																		<p>Além de tratar rugas já existentes, o botox
+																			também pode ser utilizado de forma
+																			preventiva.</p>
+
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div><div data-elementor-type="loop-item" data-elementor-id="166"
 											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-241 post-241 tratamento type-tratamento status-publish has-post-thumbnail hentry"
 											data-elementor-post-type="elementor_library" role="group"
 											aria-roledescription="slide" data-custom-edit-handle="1">
@@ -1211,123 +1521,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div data-elementor-type="loop-item" data-elementor-id="166"
-											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-240 post-240 tratamento type-tratamento status-publish has-post-thumbnail hentry"
-											data-elementor-post-type="elementor_library" role="group"
-											aria-roledescription="slide" data-custom-edit-handle="1">
-											<div class="elementor-section-wrap">
-												<div class="elementor-element elementor-element-a254893 e-flex e-con-boxed e-con e-parent"
-													data-id="a254893" data-element_type="container"
-													data-core-v316-plus="true">
-													<div class="e-con-inner">
-														<div class="elementor-element elementor-element-1e83fec elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
-															data-id="1e83fec" data-element_type="widget"
-															data-widget_type="theme-post-featured-image.default">
-															<div class="elementor-widget-container">
-																<img loading="eager" fetchpriority="high" decoding="async" width="945"
-																		height="1024" src="images/tratamentos/botox-945x1024.webp"
-																	class="attachment-full size-full"
-																	alt="Botox"
-																	srcset="images/tratamentos/botox-277x300.webp 277w, images/tratamentos/botox-768x832.webp 768w, images/tratamentos/botox-945x1024.webp 945w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
-															data-id="c9e9f59" data-element_type="container"
-															data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-															<div class="e-con-inner">
-																<div class="elementor-element elementor-element-835e68f elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
-																	data-id="835e68f" data-element_type="widget"
-																	data-widget_type="theme-post-title.default">
-																	<div class="elementor-widget-container">
-																		<h1
-																			class="elementor-heading-title elementor-size-default">
-																			BOTOX </h1>
-																	</div>
-																</div>
-																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
-																	data-id="1d14a0a" data-element_type="widget"
-																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
-
-																		<p>A toxina botulínica, conhecida popularmente
-																			como Botox®, é um tratamento estético seguro
-																			e eficaz para suavizar rugas e linhas de
-																			expressão.
-																			Sua ação ocorre ao relaxar temporariamente
-																			os músculos responsáveis pelas marcas
-																			dinâmicas do rosto, proporcionando uma
-																			aparência mais descansada e rejuvenescida 
-																		</p>
-
-																		<p>Além de tratar rugas já existentes, o botox
-																			também pode ser utilizado de forma
-																			preventiva.</p>
-
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div data-elementor-type="loop-item" data-elementor-id="166"
-											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-239 post-239 tratamento type-tratamento status-publish has-post-thumbnail hentry"
-											data-elementor-post-type="elementor_library" role="group"
-											aria-roledescription="slide" data-custom-edit-handle="1">
-											<div class="elementor-section-wrap">
-												<div class="elementor-element elementor-element-a254893 e-flex e-con-boxed e-con e-parent"
-													data-id="a254893" data-element_type="container"
-													data-core-v316-plus="true">
-													<div class="e-con-inner">
-														<div class="elementor-element elementor-element-1e83fec elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
-															data-id="1e83fec" data-element_type="widget"
-															data-widget_type="theme-post-featured-image.default">
-															<div class="elementor-widget-container">
-																<img loading="eager" fetchpriority="high" decoding="async" width="945"
-																		height="1024" src="images/tratamentos/labial-945x1024.webp"
-																	class="attachment-full size-full"
-																	alt="Preenchimento facial e corporal"
-																	srcset="images/tratamentos/labial-277x300.webp 277w, images/tratamentos/labial-768x832.webp 768w, images/tratamentos/labial-945x1024.webp 945w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
-															data-id="c9e9f59" data-element_type="container"
-															data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-															<div class="e-con-inner">
-																<div class="elementor-element elementor-element-835e68f elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
-																	data-id="835e68f" data-element_type="widget"
-																	data-widget_type="theme-post-title.default">
-																	<div class="elementor-widget-container">
-																		<h1
-																			class="elementor-heading-title elementor-size-default">
-																			PREENCHIMENTO FACIAL E CORPORAL </h1>
-																	</div>
-																</div>
-																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
-																	data-id="1d14a0a" data-element_type="widget"
-																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
-
-																		<p>Os preenchimentos facial e corporal são procedimentos minimamente invasivos, planejados de forma individualizada para melhorar contornos, proporções e pontos específicos, sempre priorizando resultados naturais e harmônicos.</p>
-
-                                                                            <ul class="wp-block-list">
-                                                                                <li>Planejamento personalizado para cada região.</li>
-                                                                                <li>Melhora de contornos e proporções.</li>
-                                                                                <li>Correção de pequenas assimetrias.</li>
-                                                                                <li>Valorização da harmonia facial e corporal.</li>
-                                                                                <li>Resultados graduais e alinhados às expectativas da paciente.</li>
-                                                                            </ul>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div data-elementor-type="loop-item" data-elementor-id="166"
+										</div><div data-elementor-type="loop-item" data-elementor-id="166"
 											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-242 post-242 tratamento type-tratamento status-publish has-post-thumbnail hentry"
 											data-elementor-post-type="elementor_library" role="group"
 											aria-roledescription="slide" data-custom-edit-handle="1">
@@ -1341,10 +1535,10 @@
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
 																<img loading="eager" fetchpriority="high" decoding="async" width="945"
-																		height="1024" src="images/tratamentos/Bioestimulador-corporal-945x1024.webp"
+																		height="1024" src="images/tratamentos/bioestimulador-novo.png"
 																	class="attachment-full size-full"
 																	alt="Bioestimulador Corporal"
-																	srcset="images/tratamentos/Bioestimulador-corporal-277x300.webp 277w, images/tratamentos/Bioestimulador-corporal-768x832.webp 768w, images/tratamentos/Bioestimulador-corporal-945x1024.webp 945w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
+																	srcset="images/tratamentos/bioestimulador-novo.png 945w" sizes="(max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1395,8 +1589,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div data-elementor-type="loop-item" data-elementor-id="166"
+										</div><div data-elementor-type="loop-item" data-elementor-id="166"
 											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-243 post-243 tratamento type-tratamento status-publish has-post-thumbnail hentry"
 											data-elementor-post-type="elementor_library" role="group"
 											aria-roledescription="slide" data-custom-edit-handle="1">
@@ -1410,10 +1603,10 @@
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
 																<img loading="eager" fetchpriority="high" decoding="async" width="945"
-																		height="1024" src="images/tratamentos/cirurgia_cisto-945x1024.webp"
+																		height="1024" src="images/tratamentos/cistos-novo.png"
 																	class="attachment-full size-full"
 																	alt="Cirurgia de Retirada de Cistos"
-																	srcset="images/tratamentos/cirurgia_cisto-277x300.webp 277w, images/tratamentos/cirurgia_cisto-768x832.webp 768w, images/tratamentos/cirurgia_cisto-945x1024.webp 945w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
+																	srcset="images/tratamentos/cistos-novo.png 945w" sizes="(max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1463,8 +1656,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div data-elementor-type="loop-item" data-elementor-id="166"
+										</div><div data-elementor-type="loop-item" data-elementor-id="166"
 											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-244 post-244 tratamento type-tratamento status-publish has-post-thumbnail hentry"
 											data-elementor-post-type="elementor_library" role="group"
 											aria-roledescription="slide" data-custom-edit-handle="1">
@@ -1478,10 +1670,10 @@
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
 																<img loading="eager" fetchpriority="high" decoding="async" width="945"
-																		height="1024" src="images/tratamentos/cirurgia_intima-945x1024.webp"
+																		height="1024" src="images/tratamentos/cirurgia-intima-flor.png"
 																	class="attachment-full size-full"
 																	alt="Cirurgia Íntima"
-																	srcset="images/tratamentos/cirurgia_intima-277x300.webp 277w, images/tratamentos/cirurgia_intima-768x832.webp 768w, images/tratamentos/cirurgia_intima-945x1024.webp 945w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
+																	srcset="images/tratamentos/cirurgia-intima-flor.png 945w" sizes="(max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1533,8 +1725,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div data-elementor-type="loop-item" data-elementor-id="166"
+										</div><div data-elementor-type="loop-item" data-elementor-id="166"
 											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-245 post-245 tratamento type-tratamento status-publish has-post-thumbnail hentry"
 											data-elementor-post-type="elementor_library" role="group"
 											aria-roledescription="slide" data-custom-edit-handle="1">
@@ -1548,10 +1739,10 @@
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
 																<img loading="eager" fetchpriority="high" decoding="async" width="945"
-																		height="1024" src="images/tratamentos/blefaroplastia-945x1024.webp"
+																		height="1024" src="images/tratamentos/blefaroplastia-novo.png"
 																	class="attachment-full size-full"
 																	alt="Blefaroplastia"
-																	srcset="images/tratamentos/blefaroplastia-277x300.webp 277w, images/tratamentos/blefaroplastia-768x832.webp 768w, images/tratamentos/blefaroplastia-945x1024.webp 945w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
+																	srcset="images/tratamentos/blefaroplastia-novo.png 945w" sizes="(max-width: 1024px) 50vw, 33vw">
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1604,59 +1795,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div data-elementor-type="loop-item" data-elementor-id="166"
-											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-246 post-246 tratamento type-tratamento status-publish has-post-thumbnail hentry"
-											data-elementor-post-type="elementor_library" role="group"
-											aria-roledescription="slide" data-custom-edit-handle="1">
-											<div class="elementor-section-wrap">
-												<div class="elementor-element elementor-element-a254893 e-flex e-con-boxed e-con e-parent"
-													data-id="a254893" data-element_type="container"
-													data-core-v316-plus="true">
-													<div class="e-con-inner">
-														<div class="elementor-element elementor-element-1e83fec elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
-															data-id="1e83fec" data-element_type="widget"
-															data-widget_type="theme-post-featured-image.default">
-															<div class="elementor-widget-container">
-																<video class="tratamento-video" autoplay muted loop playsinline preload="auto" poster="images/acompanhamento-cirurgia-plastica-poster.webp" aria-label="Acompanhamento para cirurgia plástica"><source src="media/acompanhamento-cirurgia-plastica.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
-															data-id="c9e9f59" data-element_type="container"
-															data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-															<div class="e-con-inner">
-																<div class="elementor-element elementor-element-835e68f elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
-																	data-id="835e68f" data-element_type="widget"
-																	data-widget_type="theme-post-title.default">
-																	<div class="elementor-widget-container">
-																		<h1
-																			class="elementor-heading-title elementor-size-default">
-																			ACOMPANHAMENTO PARA CIRURGIA PLÁSTICA</h1>
-																	</div>
-																</div>
-																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
-																	data-id="1d14a0a" data-element_type="widget"
-																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
-
-																		<p>A consulta e o acompanhamento para cirurgia plástica são realizados em parceria com o Dr. Gustavo Pimenta, oferecendo orientação e suporte em todas as etapas do processo.</p>
-
-                                                                            <ul class="wp-block-list">
-                                                                                <li>Avaliação individualizada e alinhamento de expectativas.</li>
-                                                                                <li>Planejamento cuidadoso do pré-operatório.</li>
-                                                                                <li>Integração com a equipe responsável pela cirurgia.</li>
-                                                                                <li>Acompanhamento próximo durante a recuperação.</li>
-                                                                                <li>Cuidado focado em segurança, bem-estar e resultados naturais.</li>
-                                                                            </ul>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
+										</div></div>
 								</div>
 								<div class="elementor-swiper-button elementor-swiper-button-prev" role="button"
 									tabindex="0">
@@ -1844,7 +1983,7 @@
 				<div class="elementor-element elementor-element-de22ad9 elementor-widget elementor-widget-image"
 					data-id="de22ad9" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img loading="eager" decoding="async" width="1197" height="1600" src="images/dra-danielle-corpo-inteiro-1197x1600.webp" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/dra-danielle-corpo-inteiro-1197x1600.webp 1197w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high">
+						<img loading="eager" decoding="async" width="764" height="555" src="images/dra-danielle-ia-retrato.webp" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/dra-danielle-ia-retrato.webp 764w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high">
 					</div>
 				</div>
 			</div>
@@ -1860,7 +1999,7 @@
 				<div class="elementor-element elementor-element-8973505 elementor-hidden-desktop elementor-widget elementor-widget-image"
 					data-id="8973505" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img loading="eager" decoding="async" width="1197" height="1600" src="images/dra-danielle-corpo-inteiro-1197x1600.webp" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/dra-danielle-corpo-inteiro-1197x1600.webp 1197w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high">
+						<img loading="eager" decoding="async" width="764" height="555" src="images/dra-danielle-ia-retrato.webp" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/dra-danielle-ia-retrato.webp 764w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high">
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-c769f57 elementor-widget elementor-widget-heading"
@@ -2038,6 +2177,36 @@
 				</div>
 			</div>
 		</div>
+		<div class="elementor-element elementor-element-6f2a1b4 e-flex e-con-boxed e-con e-parent" data-id="6f2a1b4"
+			data-element_type="container" id="ebook" data-core-v316-plus="true">
+			<div class="e-con-inner">
+				<div class="elementor-element elementor-element-b1c7d41 elementor-widget elementor-widget-text-editor"
+					data-id="b1c7d41" data-element_type="widget" data-widget_type="text-editor.default">
+					<div class="elementor-widget-container">
+						<section id="ebook-promocao" class="ebook-section">
+							<div class="container ebook-container">
+								<div class="ebook-image">
+									<img src="images/ebook-capa.jpeg" alt="Capa do E-book O Poder da Transição">
+								</div>
+								<div class="ebook-content">
+									<span class="ebook-badge">Conheço o livro best seller</span>
+									<h2 class="ebook-title">Entenda a menopausa com mais clareza</h2>
+									<p class="ebook-description">
+										Se você busca acolhimento, informação e uma visão mais leve sobre essa fase, <strong>O Poder da Transição</strong> é uma leitura que faz diferença e já acompanha tantas mulheres na jornada.
+									</p>
+									<p class="ebook-description">
+										Neste livro, a Dra. Danielle compartilha conhecimento de forma clara, acolhedora e prática, ajudando a compreender mudanças físicas, emocionais e hormonais com mais segurança, confiança e equilíbrio.
+									</p>
+									<a href="https://hotmart.com/pt-br" class="btn-cta-ebook" target="_blank" rel="noopener noreferrer">
+										Quero conhecer o livro best seller
+									</a>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="elementor-element elementor-element-87d4870 e-flex e-con-boxed e-con e-parent" data-id="87d4870"
 			data-element_type="container" id="clinica" data-core-v316-plus="true">
 			<div class="e-con-inner">
@@ -2075,11 +2244,24 @@
 						<div class="elementor-widget-container">
 							<div
 								style="display: flex; justify-content: center; width: 100%; max-width: 400px; margin: 0 auto;">
-								<video width="100%" height="auto" controls preload="auto" poster="images/video-consultorio-poster-novo.webp"
+								<video id="video-consultorio" width="100%" height="auto" controls muted loop playsinline preload="auto" poster="images/video-consultorio-poster-novo.webp"
 									style="border-radius: 8px; box-shadow: 0 0 1px 0 rgba(0,0,0,0.5), 0 1px 10px 0 rgba(0,0,0,0.15);">
 									<source src="media/consultorio-editado.mp4" type="video/mp4">
 									Seu navegador não suporta a tag de vídeo.
 								</video>
+								<script>
+								(function(){
+								  var v = document.getElementById('video-consultorio');
+								  if(!v) return;
+								  var io = new IntersectionObserver(function(entries){
+								    entries.forEach(function(e){
+								      if(e.isIntersecting){ var p = v.play(); if(p && p.catch){ p.catch(function(){}); } }
+								      else { v.pause(); }
+								    });
+								  }, { threshold: 0.4 });
+								  io.observe(v);
+								})();
+								</script>
 							</div>
 						</div>
 					</div>

@@ -8910,7 +8910,7 @@ body {
 
 .elementor-8 .elementor-element.elementor-element-7c47412:not(.elementor-motion-effects-element-type-background),
 .elementor-8 .elementor-element.elementor-element-7c47412>.elementor-motion-effects-container>.elementor-motion-effects-layer {
-  background-image: url("../images/bg-secao-flores.webp");
+  background-image: url(../images/bg-secao-design.png);background-size: cover;--overlay-opacity: 0.1;
   background-position: center center;
 }
 
