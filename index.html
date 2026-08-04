@@ -2,6 +2,8 @@
 <html lang="pt-BR">
 
 <head>
+
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script>document.documentElement.classList.add('js');</script>
@@ -15,6 +17,9 @@
 	<title>Dra. Danielle Figueiredo | Saúde da Mulher e Menopausa</title>
 	<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512x512.png">
+	<link rel="icon" type="image/png" sizes="256x256" href="images/favicon-256x256.png">
+	<link rel="icon" type="image/png" sizes="128x128" href="images/favicon-128x128.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -23,10 +28,7 @@
 	<meta property="og:locale" content="pt_BR">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Dra. Danielle Figueiredo | Saúde da Mulher e Menopausa">
-	<meta property="og:description" content="Atendimento personalizado em saúde da mulher e menopausa, com cuidado integral e acolhimento.">
-	<meta property="og:url" content="#">
-	<meta property="og:site_name" content="Danielle Figueiredo">
-	<meta property="article:modified_time" content="2026-01-29T13:31:41+00:00">
+	<meta property="og:description" content="Atendimento personalizado em saúde da mulher e menopausa, com cuidado integral, escuta e acompanhamento em todas as fases da vida.">
 	<meta property="og:image" content="images/og-social-preview.jpg">
 	<meta property="og:image:width" content="1024">
 	<meta property="og:image:height" content="1024">
@@ -562,14 +564,32 @@
     background: #111;
   }
   .elementor-element-6e11b81,
-  .elementor-element-8973505 { background: #d9c9ae; overflow: hidden; }
+  .elementor-element-8973505 { overflow: hidden; }
+  
+  /* Fundo botânico apenas na seção principal abaixo do header */
+  body.home .elementor-element-73fbcff,
+  body.home #inicio {
+    background-image: url('images/banner-principal.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: left center !important;
+    background-color: #f5f2ec !important;
+  }
+  
+  /* Transparência para não sobrepor o fundo */
+  body.home .elementor-element-73fbcff .e-con-inner,
+  body.home #inicio .e-con-inner,
+  body.home #inicio .elementor-widget-container {
+    background: transparent !important;
+  }
   .elementor-element-6e11b81 img,
   .elementor-element-8973505 img {
     width: 100%;
     height: 100%;
     max-height: 760px;
     object-fit: cover;
-    object-position: center 22%;
+    object-position: center 25%;
+    background: #d9c9ae;
   }
   .elementor-element-8c6bc6b .elementor-element-eb36001,
   .elementor-element-8c6bc6b .elementor-element-94677e7 { display: none !important; }
@@ -584,11 +604,24 @@
     margin: 18px auto 0;
   }
   @media (max-width: 767px) {
-    .brand-wordmark span { font-size: 28px; }
-    .brand-wordmark small { font-size: 8px; letter-spacing: .38em; padding-left: .38em; }
-    .elementor-element-8973505 img { max-height: 520px; object-position: center 18%; }
+      .brand-wordmark span { font-size: 28px; }
+      .brand-wordmark small { font-size: 8px; letter-spacing: .38em; padding-left: .38em; }
+      .elementor-element-8973505 img { max-height: 520px; object-position: 30% center !important; }
+
+      /* Forçar banner principal no mobile */
+      body.home #inicio,
+      body.home .elementor-element-73fbcff {
+          background-image: url('images/banner-principal.png') !important;
+      }
+
+      /* Esconder retrato que aparece no mobile */
+      .elementor-element-dceba91 { display: none !important; }
   }
 
+  /* Centralizar títulos dos cards do carrossel */
+  [data-elementor-type="loop-item"] h1.elementor-heading-title {
+      text-align: center !important;
+  }
 
   /* Correções isoladas: logo em imagem e carrossel de depoimentos */
   .brand-logo-link,
@@ -609,7 +642,7 @@
   .brand-logo-link { padding: 8px 0; }
   .brand-logo-link img { width: clamp(180px, 14vw, 235px); }
   .brand-logo-static { margin: 0 auto 18px; }
-  .brand-logo-static img { width: min(190px, 55vw); height: auto; }
+  .brand-logo-static img { width: auto; height: auto; }
 
   .elementor-element-8c6bc6b .elementor-element-7e65883 {
     width: 100%;
@@ -678,9 +711,9 @@
     transform: scale(1.2);
   }
   @media (max-width: 767px) {
-    .brand-logo-link img { width: 150px; }
-    .brand-logo-static img { width: 150px; }
-    .testimonial-quote { font-size: .94rem; line-height: 1.55; }
+  .brand-logo-link img { width: 150px; }
+  .brand-logo-static img { width: 150px; }
+  .testimonial-quote { font-size: .94rem; line-height: 1.55; }
   }
 </style>
 <style>
@@ -788,9 +821,10 @@
 			box-shadow: none;
 		}
 		.cirurgia-plastica-info {
-			max-width: 760px;
-			margin: 0 auto;
-			padding: 0 10px;
+			max-width: 100%;
+			margin: 0;
+			padding: 0;
+			text-align: left;
 		}
 		.cirurgia-plastica-info h3 {
 			margin-bottom: 16px;
@@ -800,11 +834,14 @@
 			line-height: 1.7;
 			color: inherit;
 			margin-bottom: 14px;
+			text-align: left;
 		}
 		.btn-parceria-instagram {
-			display: inline-flex;
+			display: flex;
 			align-items: center;
-			margin-top: 15px;
+			justify-content: center;
+			width: fit-content;
+			margin: 15px auto 0;
 			background-color: #ffffff;
 			color: #c13584;
 			border: 1px solid #ffffff;
@@ -819,23 +856,148 @@
 			background-color: #c13584;
 			color: #ffffff;
 		}
+		#tratamentos {
+			scroll-margin-top: 290px;
+		}
 		@media (max-width: 768px) {
+			#tratamentos {
+				scroll-margin-top: 130px;
+			}
 			.ebook-container {
 				flex-direction: column;
 				text-align: center;
 			}
+			.ebook-content {
+				align-items: center;
+			}
 		}
 	</style>
-	</head>
+	<style>.tratamento-card-content{display:none;padding:12px 16px;}.tratamento-card-content.open{display:block;}.btn-saiba-mais{display:block;background:#fff;color:#a49154;padding:10px 18px;border:2px solid #a49154;border-radius:50px;cursor:pointer;font-family:inherit;font-size:0.95rem;margin:12px auto;text-align:center}.btn-saiba-mais:hover{background:#7A6F48}</style><style>
+[data-elementor-type="loop-item"] h2 {
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    font-size: 1.15rem;
+    font-weight: 500;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    margin: 10px 0 8px;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+}
+</style>
+
+
+
+
+
+<style>
+/* Permitir que cards tenham altura individual */
+[data-elementor-type="loop-item"] {
+    height: auto !important;
+    align-self: flex-start !important;
+}
+
+/* Garantir que o conteúdo expansível não force altura igual */
+[data-elementor-type="loop-item"] .elementor-widget-theme-post-content {
+    height: auto !important;
+}
+
+/* Quando expandir, permitir crescimento individual */
+[data-elementor-type="loop-item"] .elementor-widget-theme-post-content .elementor-widget-container.visible {
+    height: auto !important;
+    display: block !important;
+}
+</style>
+<style>
+/* Cards com altura uniforme e botões alinhados */
+[data-elementor-type="loop-item"] .e-con-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
+/* Forçar container de conteúdo a crescer */
+[data-elementor-type="loop-item"] .elementor-widget-theme-post-title {
+    flex-grow: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+
+
+/* Botão Saiba menos — fundo branco, texto marrom, centralizado */
+.btn-saiba-menos {
+    display: block !important;
+    text-align: center !important;
+    background: #ffffff !important;
+    color: #a49154 !important;
+    padding: 10px 18px !important;
+    border-radius: 50px !important;
+    cursor: pointer !important;
+    border: 2px solid #a49154 !important;
+    font-family: inherit !important;
+    font-size: 0.95rem !important;
+    margin: 12px auto !important;
+    max-width: fit-content !important;
+}
+.btn-saiba-menos:hover {
+    background: #7A6F48 !important;
+    border-color: #8a7a48 !important;
+    color: #fbfaf7 !important;
+}
+
+/* Seção CUIDE-SE e formulário com fundo contínuo */
+#face[data-id="bcdf80e"],
+#contato,
+#face[data-id="bcdf80e"] .e-con-inner,
+#contato .e-con-inner,
+#face[data-id="bcdf80e"] .e-con,
+#contato .e-con {
+    background: transparent !important;
+}
+#face[data-id="bcdf80e"],
+#contato {
+    background-image: url('images/fundo-estrutura.png') !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    position: relative !important;
+}
+#face[data-id="bcdf80e"]::before,
+#contato::before {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    background: rgba(255,255,255,0.0) !important;
+    pointer-events: none !important;
+    z-index: 0 !important;
+}
+#face[data-id="bcdf80e"] > .e-con-inner,
+#contato > .e-con-inner,
+#face[data-id="bcdf80e"] .e-con-inner,
+#contato .e-con-inner {
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* H2 centralizado e com tamanho fixo */
+[data-elementor-type="loop-item"] h2 {
+    min-height: 3.2em !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+</style></head>
 
 <body
 	class="home wp-singular page-template page-template-elementor_canvas page page-id-8 wp-theme-hello-elementor elementor-default elementor-template-canvas elementor-kit-7 elementor-page elementor-page-8">
 	<div data-elementor-type="wp-page" data-elementor-id="8" class="elementor elementor-8"
 		data-elementor-post-type="page">
-		<div class="elementor-element elementor-element-73fbcff e-flex e-con-boxed e-con e-parent" data-id="73fbcff"
-			data-element_type="container" id="inicio" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"
-			data-core-v316-plus="true">
-			<div class="e-con-inner">
+		<div class="elementor-element elementor-element-73fbcff e-flex e-con-boxed e-con e-parent" data-id="73fbcff" data-element_type="container" id="inicio" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}" style="background-image: url('images/banner-principal.png') !important; background-repeat: no-repeat !important; background-size: cover !important; background-position: left center !important; background-color: #f5f2ec !important;" data-core-v316-plus="true">
+		<div class="e-con-inner">
 				<div class="elementor-element elementor-element-6ef4e10 e-flex e-con-boxed e-con e-child"
 					data-id="6ef4e10" data-element_type="container">
 					<div class="e-con-inner">
@@ -894,13 +1056,7 @@
 														role="menuitem" href="#tratamentos"> Tratamentos </a>
 												</div>
 											</li>
-											<li id="e-n-menu-title-2243" class="e-n-menu-title e-anchor"
-												role="presentation" style="--n-menu-title-order: 3;">
-												<div class="e-n-menu-title-container" aria-current="page">
-													<a class="e-n-menu-title-text e-link e-focus" tabindex="-1"
-														role="menuitem" href="#face"> Ginecologia </a>
-												</div>
-											</li>
+
 											<li id="e-n-menu-title-2244" class="e-n-menu-title e-anchor"
 												role="presentation" style="--n-menu-title-order: 4;">
 												<div class="e-n-menu-title-container" aria-current="page">
@@ -1063,7 +1219,7 @@
 				<div class="elementor-element elementor-element-acd751a elementor-widget elementor-widget-image"
 					data-id="acd751a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeindown&quot;,&quot;_animation_mobile&quot;:&quot;fadeindown&quot;}" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img loading="eager" decoding="async" width="170" height="168" src="images/decoracao-ponto.webp"
+						<img loading="eager" decoding="async" width="470" height="468" src="images/logonova.png"
 							class="attachment-large size-large wp-image-35" alt="" fetchpriority="auto">
 					</div>
 				</div>
@@ -1176,29 +1332,38 @@
 																	<div class="elementor-widget-container">
 																		<h1
 																			class="elementor-heading-title elementor-size-default">
-																			ACOMPANHAMENTO PARA CIRURGIA PLÁSTICA</h1>
+																			Cirurgia Plástica Assistida</h1>
+																		<h2>“Você acompanhada do início ao fim.”</h2>
 																	</div>
 																</div>
 																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
 																	data-id="1d14a0a" data-element_type="widget"
 																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
+																	<button class="btn-saiba-mais" type="button" onclick="var c=this.nextElementSibling; if(c.style.display==='none' || getComputedStyle(c).display==='none'){c.style.display='block';c.classList.add('visible');this.textContent='Saiba menos';}else{c.style.display='none';c.classList.remove('visible');this.textContent='Saiba mais';}">Saiba mais</button>
+<div class="elementor-widget-container" style="display:none">
 
 																		<div class="cirurgia-plastica-info">
-												
-												<p>
-													As cirurgias plásticas são realizadas em parceria com o <strong>Dr. Gustavo Pimenta</strong>. Meu papel inclui o acompanhamento completo da paciente, desde a avaliação pré-operatória até o pós-operatório, participando também do procedimento cirúrgico como auxiliar do cirurgião.
-												</p>
-												<p>
-													Dessa forma, oferecemos um atendimento integrado e personalizado em todas as etapas do processo, garantindo a sua segurança e conforto.
-												</p>
-												<a href="https://instagram.com/dra.daniellefigueiredo" class="btn-parceria-instagram" target="_blank" rel="noopener noreferrer">
-													<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px;">
-														<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-													</svg>
-													Conheça o Dr. Gustavo Pimenta
-												</a>
-											</div>
+
+																		<p>
+																			As cirurgias plásticas são realizadas em parceria com o <strong>Dr. Gustavo Pimenta</strong>. Oferecemos um acompanhamento exclusivo durante toda a jornada cirúrgica, desde o planejamento até a recuperação, garantindo um atendimento integrado, personalizado e seguro.
+																		</p>
+
+																		<p>
+																			Meu papel inclui o acompanhamento completo da paciente em todas as etapas: avaliação pré-operatória, solicitação e acompanhamento de exames, elaboração do orçamento, orientação para aquisição das próteses, organização do procedimento, assistência médica durante a cirurgia como auxiliar do cirurgião e acompanhamento pós-operatório.
+																		</p>
+
+																		<p>
+																			Dessa forma, você conta com uma equipe comprometida em proporcionar mais segurança, tranquilidade e confiança em cada etapa do processo, do primeiro atendimento até a sua recuperação.
+																		</p>
+
+																		<a href="https://instagram.com/dra.daniellefigueiredo" class="btn-parceria-instagram" target="_blank" rel="noopener noreferrer">
+																			<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" style="margin-right: 8px;">
+																				<path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+																			</svg>
+																			Conheça o Dr. Gustavo Pimenta
+																		</a>
+
+																	</div>
 																	</div>
 																</div>
 															</div>
@@ -1219,11 +1384,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="eager" fetchpriority="high" decoding="async" width="945"
-																		height="1024" src="images/tratamentos/implanon-945x1024.webp"
-																		class="attachment-full size-full"
-																		alt="Implanon"
-																		srcset="images/tratamentos/implanon-277x300.webp 277w, images/tratamentos/implanon-768x832.webp 768w, images/tratamentos/implanon-945x1024.webp 945w" sizes="(max-width: 767px) 100vw, (max-width: 1024px) 50vw, 33vw">
+																<video class="tratamento-video" autoplay muted loop playsinline preload="auto" poster="images/tratamentos/implanon-945x1024.webp" aria-label="Implanon"><source src="media/snapinsta-implanon.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1236,39 +1397,17 @@
 																	<div class="elementor-widget-container">
 																		<h1
 																			class="elementor-heading-title elementor-size-default">
-																			IMPLANON</h1>
+																			DIUs e Implanon</h1>
+																		<h2>“Mais liberdade para viver sem preocupações.”</h2>
 																	</div>
 																</div>
 																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
 																	data-id="1d14a0a" data-element_type="widget"
 																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
+																	<button class="btn-saiba-mais" type="button" onclick="var c=this.nextElementSibling; if(c.style.display==='none' || getComputedStyle(c).display==='none'){c.style.display='block';c.classList.add('visible');this.textContent='Saiba menos';}else{c.style.display='none';c.classList.remove('visible');this.textContent='Saiba mais';}">Saiba mais</button>
+<div class="elementor-widget-container" style="display:none">
 
-																		<p>O Implanon é um método contraceptivo moderno,
-																			seguro e altamente eficaz. Trata-se de um
-																			pequeno bastonete flexível, inserido sob a
-																			pele do braço, que libera continuamente uma
-																			dose baixa de hormônio (etonogestrel) para
-																			prevenir a gravidez por até 3 anos.</p>
-
-																		<ul class="wp-block-list">
-																			<li>Alta eficácia contraceptiva (superior a
-																				99%).</li>
-
-																			<li>Duração prolongada: proteção por até 3
-																				anos.</li>
-
-																			<li>Método reversível: a fertilidade retorna
-																				logo após a retirada.</li>
-
-																			<li>Discreto e confortável, não interfere
-																				nas atividades do dia a dia.</li>
-
-																			<li>Evita o uso diário de pílulas ou outros
-																				métodos.</li>
-
-																			<li>Procedimento simples, seguro e rápido.
-																			</li>
+																		<p>Mais liberdade e tranquilidade para o seu dia a dia. Métodos contraceptivos de longa duração, altamente eficazes, com opções hormonais e não hormonais, indicados de forma personalizada para oferecer segurança, praticidade e mais autonomia para você viver sem preocupações.</p>
 
 																		</ul>
 
@@ -1305,25 +1444,18 @@
 																	<div class="elementor-widget-container">
 																		<h1
 																			class="elementor-heading-title elementor-size-default">
-																			FRAXX ÍNTIMO</h1>
+																			Laser Íntimo</h1>
+																		<h2>“Recupere seu conforto e sua qualidade de vida íntima.”</h2>
 																	</div>
 																</div>
 																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
 																	data-id="1d14a0a" data-element_type="widget"
 																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
+																	<button class="btn-saiba-mais" type="button" onclick="var c=this.nextElementSibling; if(c.style.display==='none' || getComputedStyle(c).display==='none'){c.style.display='block';c.classList.add('visible');this.textContent='Saiba menos';}else{c.style.display='none';c.classList.remove('visible');this.textContent='Saiba mais';}">Saiba mais</button>
+<div class="elementor-widget-container" style="display:none">
 
-																		<p>O FRAXX Íntimo é um tratamento realizado por radiofrequência fracionada, indicado para promover renovação tecidual e estimular a produção de colágeno na região íntima feminina.</p>
+																		<p>Recupere o conforto, a confiança e a qualidade de vida íntima. O laser íntimo auxilia no tratamento do ressecamento, flacidez, desconforto nas relações, incontinência urinária leve e outras alterações, promovendo mais bem-estar em todas as fases da vida.</p>
 
-                                                                            <p>A indicação é individualizada e definida após avaliação médica, considerando as necessidades, expectativas e condições de saúde de cada paciente.</p>
-
-                                                                            <ul class="wp-block-list">
-                                                                                <li>Estímulo à produção de colágeno.</li>
-                                                                                <li>Melhora da firmeza e da qualidade da pele.</li>
-                                                                                <li>Auxílio no rejuvenescimento íntimo.</li>
-                                                                                <li>Procedimento realizado com planejamento personalizado.</li>
-                                                                                <li>Acompanhamento médico antes e depois do tratamento.</li>
-                                                                            </ul>
 																	</div>
 																</div>
 															</div>
@@ -1361,13 +1493,15 @@
 																	<div class="elementor-widget-container">
 																		<h1
 																			class="elementor-heading-title elementor-size-default">
-																			PREENCHIMENTO FACIAL E CORPORAL </h1>
+																			Harmonização Facial</h1>
+																		<h2>“Rejuvenesça preservando sua essência.”</h2>
 																	</div>
 																</div>
 																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
 																	data-id="1d14a0a" data-element_type="widget"
 																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
+																	<button class="btn-saiba-mais" type="button" onclick="var c=this.nextElementSibling; if(c.style.display==='none' || getComputedStyle(c).display==='none'){c.style.display='block';c.classList.add('visible');this.textContent='Saiba menos';}else{c.style.display='none';c.classList.remove('visible');this.textContent='Saiba mais';}">Saiba mais</button>
+<div class="elementor-widget-container" style="display:none">
 
 																		<p>Os preenchimentos facial e corporal são procedimentos minimamente invasivos, planejados de forma individualizada para melhorar contornos, proporções e pontos específicos, sempre priorizando resultados naturais e harmônicos.</p>
 
@@ -1415,27 +1549,17 @@
 																	<div class="elementor-widget-container">
 																		<h1
 																			class="elementor-heading-title elementor-size-default">
-																			BOTOX </h1>
+																			Harmonização Íntima </h1>
+																		<h2>“Confiança, autoestima e bem-estar.”</h2>
 																	</div>
 																</div>
 																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
 																	data-id="1d14a0a" data-element_type="widget"
 																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
+																	<button class="btn-saiba-mais" type="button" onclick="var c=this.nextElementSibling; if(c.style.display==='none' || getComputedStyle(c).display==='none'){c.style.display='block';c.classList.add('visible');this.textContent='Saiba menos';}else{c.style.display='none';c.classList.remove('visible');this.textContent='Saiba mais';}">Saiba mais</button>
+<div class="elementor-widget-container" style="display:none">
 
-																		<p>A toxina botulínica, conhecida popularmente
-																			como Botox®, é um tratamento estético seguro
-																			e eficaz para suavizar rugas e linhas de
-																			expressão.
-																			Sua ação ocorre ao relaxar temporariamente
-																			os músculos responsáveis pelas marcas
-																			dinâmicas do rosto, proporcionando uma
-																			aparência mais descansada e rejuvenescida 
-																		</p>
-
-																		<p>Além de tratar rugas já existentes, o botox
-																			também pode ser utilizado de forma
-																			preventiva.</p>
+																		<p>Recupere a confiança, o conforto e a autoestima na sua intimidade. Utilizamos técnicas personalizadas com enxerto de gordura, Nanofat, terapias regenerativas com células-tronco derivadas do tecido adiposo e produtos de alta tecnologia, sempre indicados de acordo com as necessidades de cada paciente para promover rejuvenescimento, funcionalidade e resultados naturais.</p>
 
 																	</div>
 																</div>
@@ -1474,179 +1598,18 @@
 																	<div class="elementor-widget-container">
 																		<h1
 																			class="elementor-heading-title elementor-size-default">
-																			DIU</h1>
+																			Implantes Hormonais</h1>
+																		<h2>“Mais praticidade e tranquilidade no tratamento hormonal.”</h2>
 																	</div>
 																</div>
 																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
 																	data-id="1d14a0a" data-element_type="widget"
 																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
+																	<button class="btn-saiba-mais" type="button" onclick="var c=this.nextElementSibling; if(c.style.display==='none' || getComputedStyle(c).display==='none'){c.style.display='block';c.classList.add('visible');this.textContent='Saiba menos';}else{c.style.display='none';c.classList.remove('visible');this.textContent='Saiba mais';}">Saiba mais</button>
+<div class="elementor-widget-container" style="display:none">
 
-																		<p>O Dispositivo Intrauterino (DIU) é um método
-																			contraceptivo de longa duração, seguro e
-																			eficaz, colocado dentro do útero para
-																			prevenir a gravidez. Ele não interfere na
-																			fertilidade de forma definitiva: ao ser
-																			retirado, a mulher pode engravidar
-																			normalmente. </p>
+																		<p>Implantes Hormonais Ideal para mulheres que desejam mais praticidade e tranquilidade no tratamento hormonal. Os implantes promovem a liberação contínua dos hormônios, reduzindo a necessidade de medicações diárias e favorecendo um tratamento personalizado, confortável e adaptado às suas necessidades.</p>
 
-																		<p>Além disso, o DIU pode ser indicado tanto
-																			para mulheres que já tiveram filhos quanto
-																			para aqueles que nunca engravidaram, sempre
-																			mediante a avaliação médica.</p>
-
-																		<ul class="wp-block-list">
-																			<li>Alta eficácia contraceptiva, mais de 99%
-																				de proteção contra gravidez. </li>
-
-																			<li>Duração prolongada: pode proteger de 3 à
-																				10 anos, dependendo do modelo. </li>
-
-																			<li>Pode reduzir o fluxo menstrual, aliviar
-																				cólicas e até ajudar em casos de
-																				sangramento intenso ou endometriose.
-																			</li>
-
-																			<li>Evita o uso diário de pílulas ou outros
-																				métodos. </li>
-
-																			<li>Procedimento simples, seguro e rápido.
-																			</li>
-
-																		</ul>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div><div data-elementor-type="loop-item" data-elementor-id="166"
-											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-242 post-242 tratamento type-tratamento status-publish has-post-thumbnail hentry"
-											data-elementor-post-type="elementor_library" role="group"
-											aria-roledescription="slide" data-custom-edit-handle="1">
-											<div class="elementor-section-wrap">
-												<div class="elementor-element elementor-element-a254893 e-flex e-con-boxed e-con e-parent"
-													data-id="a254893" data-element_type="container"
-													data-core-v316-plus="true">
-													<div class="e-con-inner">
-														<div class="elementor-element elementor-element-1e83fec elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
-															data-id="1e83fec" data-element_type="widget"
-															data-widget_type="theme-post-featured-image.default">
-															<div class="elementor-widget-container">
-																<img loading="eager" fetchpriority="high" decoding="async" width="945"
-																		height="1024" src="images/tratamentos/bioestimulador-novo.png"
-																	class="attachment-full size-full"
-																	alt="Bioestimulador Corporal"
-																	srcset="images/tratamentos/bioestimulador-novo.png 945w" sizes="(max-width: 1024px) 50vw, 33vw">
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
-															data-id="c9e9f59" data-element_type="container"
-															data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-															<div class="e-con-inner">
-																<div class="elementor-element elementor-element-835e68f elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
-																	data-id="835e68f" data-element_type="widget"
-																	data-widget_type="theme-post-title.default">
-																	<div class="elementor-widget-container">
-																		<h1
-																			class="elementor-heading-title elementor-size-default">
-																			BIOESTIMULADOR CORPORAL</h1>
-																	</div>
-																</div>
-																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
-																	data-id="1d14a0a" data-element_type="widget"
-																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
-
-																		<p>O Bioestimulador Corporal é um tratamento
-																			estético injetável que estimula a produção
-																			natural de colágeno na pele. Indicado para
-																			quem busca melhora da firmeza e da qualidade
-																			da pele, ele atua de dentro para fora,
-																			proporcionando resultados progressivos e
-																			duradouros. </p>
-
-																		<ul class="wp-block-list">
-																			<li>Estimula a produção de colágeno,
-																				combatendo a flacidez.</li>
-
-																			<li>Melhora a firmeza e a elasticidade da
-																				pele.</li>
-
-																			<li>Pode ser aplicado em diferentes áreas do
-																				corpo (como braços, abdômen, coxas e
-																				glúteos).</li>
-
-																			<li>Resultados naturais e progressivos, com
-																				melhora contínua ao longo dos meses.
-																			</li>
-																		</ul>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div><div data-elementor-type="loop-item" data-elementor-id="166"
-											class="elementor elementor-166 swiper-slide e-loop-item e-loop-item-243 post-243 tratamento type-tratamento status-publish has-post-thumbnail hentry"
-											data-elementor-post-type="elementor_library" role="group"
-											aria-roledescription="slide" data-custom-edit-handle="1">
-											<div class="elementor-section-wrap">
-												<div class="elementor-element elementor-element-a254893 e-flex e-con-boxed e-con e-parent"
-													data-id="a254893" data-element_type="container"
-													data-core-v316-plus="true">
-													<div class="e-con-inner">
-														<div class="elementor-element elementor-element-1e83fec elementor-widget elementor-widget-theme-post-featured-image elementor-widget-image"
-															data-id="1e83fec" data-element_type="widget"
-															data-widget_type="theme-post-featured-image.default">
-															<div class="elementor-widget-container">
-																<img loading="eager" fetchpriority="high" decoding="async" width="945"
-																		height="1024" src="images/tratamentos/cistos-novo.png"
-																	class="attachment-full size-full"
-																	alt="Cirurgia de Retirada de Cistos"
-																	srcset="images/tratamentos/cistos-novo.png 945w" sizes="(max-width: 1024px) 50vw, 33vw">
-															</div>
-														</div>
-														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
-															data-id="c9e9f59" data-element_type="container"
-															data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-															<div class="e-con-inner">
-																<div class="elementor-element elementor-element-835e68f elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading"
-																	data-id="835e68f" data-element_type="widget"
-																	data-widget_type="theme-post-title.default">
-																	<div class="elementor-widget-container">
-																		<h1
-																			class="elementor-heading-title elementor-size-default">
-																			CIRURGIA DE RETIRADA DE CISTOS, LIPOMAS OU
-																			NEVOS</h1>
-																	</div>
-																</div>
-																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
-																	data-id="1d14a0a" data-element_type="widget"
-																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
-
-																		<p>O consultório oferece procedimentos cirúrgicos
-																			seguros e eficazes para a retirada de
-																			cistos, lipomas (nódulos de gordura) e nevos
-																			(pintas ou sinais). Essas cirurgias são
-																			indicadas tanto por questões médicas – como
-																			dor, crescimento, risco de infecção ou
-																			alterações suspeitas – quanto por motivos
-																			estéticos.  </p>
-
-																		<ul class="wp-block-list">
-																			<li>Procedimento simples e seguro.</li>
-
-																			<li>Possibilidade de análise laboratorial
-																				(quando indicado).</li>
-
-																			<li>Alívio de sintomas como dor ou
-																				desconforto.</li>
-
-																			<li>Melhora estética e autoestima.</li>
 
 																		</ul>
 																	</div>
@@ -1669,11 +1632,7 @@
 															data-id="1e83fec" data-element_type="widget"
 															data-widget_type="theme-post-featured-image.default">
 															<div class="elementor-widget-container">
-																<img loading="eager" fetchpriority="high" decoding="async" width="945"
-																		height="1024" src="images/tratamentos/cirurgia-intima-flor.png"
-																	class="attachment-full size-full"
-																	alt="Cirurgia Íntima"
-																	srcset="images/tratamentos/cirurgia-intima-flor.png 945w" sizes="(max-width: 1024px) 50vw, 33vw">
+																<video class="tratamento-video" autoplay muted loop playsinline preload="auto" poster="images/fraxx-intimo-poster.webp" aria-label="Procedimento de FRAXX íntimo"><source src="media/fraxx-intimo.mp4" type="video/mp4">Seu navegador não suporta vídeo.</video>
 															</div>
 														</div>
 														<div class="elementor-element elementor-element-c9e9f59 e-flex e-con-boxed e-con e-child"
@@ -1686,35 +1645,17 @@
 																	<div class="elementor-widget-container">
 																		<h1
 																			class="elementor-heading-title elementor-size-default">
-																			CIRURGIA ÍNTIMA</h1>
+																			Cirurgia Íntima</h1>
+																		<h2>“Mais conforto e qualidade de vida.”</h2>
 																	</div>
 																</div>
 																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
 																	data-id="1d14a0a" data-element_type="widget"
 																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
+																	<button class="btn-saiba-mais" type="button" onclick="var c=this.nextElementSibling; if(c.style.display==='none' || getComputedStyle(c).display==='none'){c.style.display='block';c.classList.add('visible');this.textContent='Saiba menos';}else{c.style.display='none';c.classList.remove('visible');this.textContent='Saiba mais';}">Saiba mais</button>
+<div class="elementor-widget-container" style="display:none">
 
-																		<p>A Cirurgia Íntima abrange procedimentos
-																			voltados para a saúde, o conforto e a
-																			estética da região genital feminina. Entre
-																			eles, a Ninfoplastia é a técnica mais
-																			realizada e indicada para a redução ou
-																			correção dos pequenos lábios vaginais.
-																			Esse procedimento pode trazer benefícios não
-																			apenas estéticos, mas também funcionais,
-																			como:  </p>
-
-																		<ul class="wp-block-list">
-																			<li>Melhora da autoestima e bem-estar.</li>
-
-																			<li>Mais conforto em atividades físicas e
-																				relações íntimas.</li>
-
-																			<li>Procedimento seguro e com recuperação
-																				rápida.</li>
-
-																			<li>Resultados estéticos discretos e
-																				naturais.</li>
+																		<p>Recupere o conforto, a funcionalidade e a confiança na sua intimidade. A cirurgia íntima é indicada para corrigir alterações funcionais e estéticas da região íntima, proporcionando mais qualidade de vida, autoestima e bem-estar.</p>
 
 																		</ul>
 
@@ -1755,37 +1696,17 @@
 																	<div class="elementor-widget-container">
 																		<h1
 																			class="elementor-heading-title elementor-size-default">
-																			BLEFAROPLASTIA </h1>
+																			Programa D. Mulher 360</h1>
+																		<h2>“Volte a se sentir você mesma.”</h2>
 																	</div>
 																</div>
 																<div class="elementor-element elementor-element-1d14a0a elementor-widget elementor-widget-theme-post-content"
 																	data-id="1d14a0a" data-element_type="widget"
 																	data-widget_type="theme-post-content.default">
-																	<div class="elementor-widget-container">
+																	<button class="btn-saiba-mais" type="button" onclick="var c=this.nextElementSibling; if(c.style.display==='none' || getComputedStyle(c).display==='none'){c.style.display='block';c.classList.add('visible');this.textContent='Saiba menos';}else{c.style.display='none';c.classList.remove('visible');this.textContent='Saiba mais';}">Saiba mais</button>
+<div class="elementor-widget-container" style="display:none">
 
-																		<p>A Blefaroplastia é um procedimento cirúrgico
-																			que corrige o excesso de pele, bolsas de
-																			gordura e flacidez ao redor das pálpebras.
-																			Além de proporcionar um olhar mais harmônico
-																			e rejuvenescido, também pode melhorar o
-																			campo de visão em casos em que o excesso de
-																			pele compromete a abertura dos olhos. </p>
-
-																		<ul class="wp-block-list">
-																			<li>Rejuvenescimento do olhar, com aparência
-																				mais descansada e natural.</li>
-
-																			<li>Redução do excesso de pele nas pálpebras
-																				superiores.</li>
-
-																			<li>Diminuição das bolsas de gordura nas
-																				pálpebras inferiores.</li>
-
-																			<li>Melhora da simetria e harmonia facial.
-																			</li>
-
-																			<li>Aumento da autoconfiança e bem-estar.
-																			</li>
+																		<p>Você sente que seu corpo mudou e que já não é mais a mesma mulher de alguns anos atrás? Cansaço constante, dificuldade para dormir, irritabilidade, ganho de peso, baixa libido, ansiedade ou falta de disposição podem ser sinais da transição para a menopausa e você não precisa conviver com isso. O Programa D. Mulher 360 oferece um acompanhamento completo e personalizado, unindo atendimento médico, nutricional e psicológico, com três consultas anuais em cada especialidade, para ajudar você a recuperar seu equilíbrio, bem-estar, autoestima e qualidade de vida.</p>
 
 																		</ul>
 																	</div>
@@ -1983,7 +1904,7 @@
 				<div class="elementor-element elementor-element-de22ad9 elementor-widget elementor-widget-image"
 					data-id="de22ad9" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img loading="eager" decoding="async" width="764" height="555" src="images/dra-danielle-ia-retrato.webp" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/dra-danielle-ia-retrato.webp 764w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high">
+						<img loading="eager" decoding="async" width="364" height="555" src="images/fotonova.png" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/fotonova.png 764w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high" style="object-fit:cover;width:100%;height:100%;object-position:center 70%;">
 					</div>
 				</div>
 			</div>
@@ -1999,7 +1920,7 @@
 				<div class="elementor-element elementor-element-8973505 elementor-hidden-desktop elementor-widget elementor-widget-image"
 					data-id="8973505" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img loading="eager" decoding="async" width="764" height="555" src="images/dra-danielle-ia-retrato.webp" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/dra-danielle-ia-retrato.webp 764w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high">
+						<img loading="eager" decoding="async" width="764" height="555" src="images/fotonova.png" class="attachment-large size-large wp-image-261" alt="Dra. Danielle Figueiredo" srcset="images/fotonova.png 764w" sizes="(max-width: 800px) 100vw, 800px" fetchpriority="high" style="object-fit:cover;width:100%;height:100%;object-position:center 70%;">
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-c769f57 elementor-widget elementor-widget-heading"
@@ -2060,19 +1981,34 @@
 					<div class="elementor-element elementor-element-7e65883 e-con-full e-flex e-con e-child"
 						data-id="7e65883" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div class="testimonial-slider" id="testimonial-slider">
+
                             <div class="testimonial-stage">
                                 <article class="testimonial-slide is-active" aria-hidden="false">
                                     <p class="testimonial-quote">“Dra. Danielle, você fez toda a diferença. Mesmo eu sem acreditar na possibilidade dessa transformação, você me conduziu com segurança, atenção e amor em cada etapa. Gratidão eterna por tudo, especialmente por ter sido fundamental na retirada do melanoma.”</p>
                                     <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
                                     <p class="testimonial-author">Lorimar Dornelas – 48 anos</p>
                                 </article>
+
                                 <article class="testimonial-slide" aria-hidden="true">
                                     <p class="testimonial-quote">“Tenho muito orgulho e gratidão por fazer parte da sua trajetória como paciente. Que Deus continue iluminando seus caminhos e seu propósito.”</p>
                                     <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
                                     <p class="testimonial-author">Paciente – relato público</p>
                                 </article>
+
                                 <article class="testimonial-slide" aria-hidden="true">
                                     <p class="testimonial-quote">“Tenho 53 anos, estou no pós-menopausa e estou indo para o meu quarto ano de reposição hormonal.”</p>
+                                    <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
+                                    <p class="testimonial-author">Paciente – acompanhamento da menopausa</p>
+                                </article>
+
+								<article class="testimonial-slide" aria-hidden="true">
+                                    <p class="testimonial-quote">“Eu amei nossa consulta. Pude me abrir e falar coisas nas quais me envergonhava, e descobri que sou normal, e que toda mulher passa... O atendimento além de ter sido leve, descontraído, foi humanizado. É bom saber que existem médicos que amam a profissão e fazem tudo com amor como vc... eu amei.... Obrigada por tudo.”</p>
+                                    <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
+                                    <p class="testimonial-author">Paciente – acompanhamento da menopausa</p>
+                                </article>
+
+								<article class="testimonial-slide" aria-hidden="true">
+                                    <p class="testimonial-quote">“Que mensagem linda e cheia de propósito! Que Deus continue te abençoando e usando suas mãos como instrumento de cuidado, amor e bem-estar. Seu coração generoso e sua dedicação fazem toda a diferença na vida de quem cruza o seu caminho. Nunca duvide do impacto que você tem — você leva luz por onde passa!”</p>
                                     <span class="testimonial-stars" aria-label="5 estrelas">★★★★★</span>
                                     <p class="testimonial-author">Paciente – acompanhamento da menopausa</p>
                                 </article>
@@ -2081,6 +2017,8 @@
                                 <button class="testimonial-dot is-active" type="button" aria-label="Ver depoimento 1" aria-pressed="true"></button>
                                 <button class="testimonial-dot" type="button" aria-label="Ver depoimento 2" aria-pressed="false"></button>
                                 <button class="testimonial-dot" type="button" aria-label="Ver depoimento 3" aria-pressed="false"></button>
+                                <button class="testimonial-dot" type="button" aria-label="Ver depoimento 4" aria-pressed="false"></button>
+                                <button class="testimonial-dot" type="button" aria-label="Ver depoimento 5" aria-pressed="false"></button>
                             </div>
                         </div>
                     </div>
@@ -2208,8 +2146,8 @@
 			</div>
 		</div>
 		<div class="elementor-element elementor-element-87d4870 e-flex e-con-boxed e-con e-parent" data-id="87d4870"
-			data-element_type="container" id="clinica" data-core-v316-plus="true">
-			<div class="e-con-inner">
+			data-element_type="container" id="clinica" data-core-v316-plus="true" style="background-image:url('images/fundo-estrutura.png');background-repeat:no-repeat;background-size:cover;background-position:center;padding-top:0;margin-top:-40px;">
+			<div class="e-con-inner" style="padding-top:0;margin-top:0;">
 				<div class="elementor-element elementor-element-9a24859 e-con-full e-flex e-con e-child"
 					data-id="9a24859" data-element_type="container">
 					<div class="elementor-element elementor-element-07a8b5c elementor-widget elementor-widget-heading"
@@ -2457,8 +2395,8 @@
 								<div class="elementor-element elementor-element-f33746e elementor-hidden-mobile elementor-widget elementor-widget-image"
 									data-id="f33746e" data-element_type="widget" data-widget_type="image.default">
 									<div class="elementor-widget-container">
-										<img loading="eager" decoding="async" width="170" height="168" src="images/decoracao-ponto.webp"
-											class="attachment-large size-large wp-image-35" alt="" fetchpriority="auto">
+										<img loading="eager" decoding="async" width="300" height="268" src="images/logonova.png"
+											class="attachment-large size-large wp-image-35 logo-cuide-se" alt="" fetchpriority="auto">
 									</div>
 								</div>
 							</div>
@@ -2826,14 +2764,15 @@
 				</div>
 			</div>
 		</div>
-		<div class="elementor-element elementor-element-d9fbe90 e-flex e-con-boxed e-con e-parent" data-id="d9fbe90"
+		<div class="elementor-element elementor-element-d9fbe90 e-flex e-con-full e-con e-parent" data-id="d9fbe90"
 			data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"
-			data-core-v316-plus="true">
+			data-core-v316-plus="true" style="background:linear-gradient(to bottom,#faf8f5,#F5E9D8) !important;">
 			<div class="e-con-inner">
 				<div class="elementor-element elementor-element-75db22a elementor-widget elementor-widget-image"
 					data-id="75db22a" data-element_type="widget" data-widget_type="image.default">
-					<div class="elementor-widget-container">
-						<div class="brand-logo-static" aria-label="D. Mulher"><img fetchpriority="auto" loading="eager" decoding="async" src="images/logo-d-mulher-simple-dark.png" alt="D. Mulher" width="190" height="35"></div>
+					<div class="elementor-widget-container" style="text-align:center;margin-bottom:18px;">
+						<div class="brand-logo-static" aria-label="D. Mulher" style="display:inline-flex;"><img loading="eager" decoding="async" src="images/logonova.png" alt="D. Mulher" width="260" height="48" style="height:auto;max-width:min(360px, 85vw);width:auto;"></div>
+					<p style="text-align:center;margin:12px auto 0;font-family:'Cormorant Garamond',Georgia,serif;font-size:1.05rem;font-style:italic;color:#5a4a2a;">“Reveste-se de força e dignidade; sorri diante do futuro.”<br><span style="font-size:0.85rem;font-style:normal;">Provérbios 31:25</span></p>
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-7230719 e-flex e-con-boxed e-con e-child"
@@ -3230,18 +3169,18 @@
 				</div>
 			</div>
 		</div>
-		<div class="elementor-element elementor-element-38edf9e e-flex e-con-boxed e-con e-parent" data-id="38edf9e"
+		<div class="elementor-element elementor-element-38edf9e e-flex e-con-full e-con e-child" data-id="38edf9e"
 			data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}"
-			data-core-v316-plus="true">
+			data-core-v316-plus="true" id="copyright-bar" style="background:linear-gradient(to bottom,#F5EADA,#F5EADA) !important;">
 			<div class="e-con-inner">
 				<div class="elementor-element elementor-element-afe2c30 elementor-widget elementor-widget-text-editor"
 					data-id="afe2c30" data-element_type="widget" data-widget_type="text-editor.default">
 					<div class="elementor-widget-container">
-						Todos os direitos reservados a Dra. Danielle Figueiredo </div>
+						<p style="margin:0;text-align:center;opacity:0.8;">Todos os direitos reservados a Dra. Danielle Figueiredo</p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 	<script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
@@ -3398,7 +3337,7 @@
 
         var slides = Array.prototype.slice.call(slider.querySelectorAll('.testimonial-slide'));
         var dots = Array.prototype.slice.call(slider.querySelectorAll('.testimonial-dot'));
-        if (slides.length !== 3 || dots.length !== 3) return;
+        if (slides.length < 2 || dots.length !== slides.length) return;
 
         var current = 0;
         var timer = null;
@@ -3448,6 +3387,118 @@
     })();
     </script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var swiperWrapper = document.querySelector('.swiper-wrapper');
+    if (!swiperWrapper) return;
+    
+    var slides = Array.from(swiperWrapper.querySelectorAll('[data-elementor-type="loop-item"]'));
+    var desiredOrder = [
+        'Programa D. Mulher 360',
+        'Implantes Hormonais',
+        'Laser Íntimo',
+        'DIUs e Implanon',
+        'Harmonização Íntima',
+        'Harmonização Facial',
+        'Cirurgia Íntima',
+        'Cirurgia Plástica Assistida'
+    ];
+    
+    // Create a map of title to slide element (case-insensitive)
+    var slideMap = {};
+    slides.forEach(function(slide) {
+        var titleEl = slide.querySelector('.elementor-heading-title');
+        if (titleEl) {
+            var title = titleEl.textContent.trim();
+            slideMap[title.toUpperCase()] = slide;
+        }
+    });
+    
+    // Reorder slides according to desired order
+    desiredOrder.forEach(function(title) {
+        var slide = slideMap[title.toUpperCase()];
+        if (slide) {
+            swiperWrapper.appendChild(slide);
+        }
+    });
+});
+</script>
+<script>
+(function() {
+    // Controle dos botões Saiba mais / Saiba menos nos cards do carrossel
+    document.querySelectorAll('.btn-saiba-mais').forEach(function(btn) {
+        var container = btn.nextElementSibling;
+        if (!container || !container.classList.contains('elementor-widget-container')) return;
+
+        // Impedir comportamento inline antigo
+        btn.removeAttribute('onclick');
+
+        // Botão "Saiba menos" no final do conteúdo expandido
+        var btnMenos = document.createElement('button');
+        btnMenos.className = 'btn-saiba-menos';
+        btnMenos.type = 'button';
+        btnMenos.textContent = 'Saiba menos';
+        btnMenos.style.display = 'none';
+        btnMenos.style.marginTop = '10px';
+        container.appendChild(btnMenos);
+
+        // Saiba mais → expande e some, mostra Saiba menos
+        btn.addEventListener('click', function() {
+            container.style.display = 'block';
+            btn.style.display = 'none';
+            btnMenos.style.display = 'block';
+        });
+
+        // Saiba menos → recolhe e reaparece Saiba mais
+        btnMenos.addEventListener('click', function() {
+            container.style.display = 'none';
+            btn.style.display = 'block';
+            btnMenos.style.display = 'none';
+        });
+    });
+})();
+</script>
+<script>
+(function() {
+    var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+    if (!isMobile) return;
+    var links = document.querySelectorAll('link[rel*="icon"]');
+    var desired = [
+        { rel: 'icon', type: 'image/png', sizes: '512x512', href: 'images/favicon-mobile-512x512.png' },
+        { rel: 'icon', type: 'image/png', sizes: '256x256', href: 'images/favicon-mobile-256x256.png' },
+        { rel: 'icon', type: 'image/png', sizes: '128x128', href: 'images/favicon-mobile-128x128.png' },
+        { rel: 'icon', type: 'image/png', sizes: '64x64', href: 'images/favicon-mobile-64x64.png' },
+        { rel: 'icon', type: 'image/png', sizes: '32x32', href: 'images/favicon-mobile-32x32.png' },
+        { rel: 'icon', type: 'image/png', sizes: '16x16', href: 'images/favicon-mobile-16x16.png' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: 'images/favicon-mobile-180x180.png' }
+    ];
+    var appleDesired = desired[desired.length - 1];
+    var existingApple = document.querySelector('link[rel="apple-touch-icon"]');
+    if (existingApple) existingApple.href = appleDesired.href;
+    for (var i = 0; i < desired.length - 1; i++) {
+        var d = desired[i];
+        var found = null;
+        for (var j = 0; j < links.length; j++) {
+            var l = links[j];
+            if (l.getAttribute('rel') === d.rel && (!d.sizes || l.getAttribute('sizes') === d.sizes)) {
+                found = l;
+                break;
+            }
+        }
+        if (found) {
+            found.href = d.href;
+        } else {
+            var link = document.createElement('link');
+            link.setAttribute('rel', d.rel);
+            link.setAttribute('type', d.type);
+            link.setAttribute('sizes', d.sizes);
+            link.href = d.href;
+            document.head.appendChild(link);
+        }
+    }
+})();
+</script>
 </body>
 
 </html>

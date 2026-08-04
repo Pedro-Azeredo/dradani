@@ -340,7 +340,7 @@ button:focus {
 button:focus,
 button:hover {
     color: #fff;
-    background-color: #c36;
+    background-color: #7A6F48;
     text-decoration: none
 }
 
@@ -7774,7 +7774,8 @@ body {
 }
 
 .elementor-8 .elementor-element.elementor-element-acd751a img {
-  width: 60px;
+    width: 150px;
+    height: auto;
 }
 
 .elementor-8 .elementor-element.elementor-element-366aec9 {
@@ -9111,8 +9112,8 @@ body {
   text-align: left;
 }
 
-.elementor-8 .elementor-element.elementor-element-f33746e img {
-  width: 40%;
+.elementor-8 .elementor-element.elementor-element-f33746e img.logo-cuide-se {
+  width: 110%;
 }
 
 .elementor-8 .elementor-element.elementor-element-244d1a2 {
